@@ -7,8 +7,8 @@ use Livewire\Component;
 
 class Add extends Component
 {
+    use AttributeUser;
     public $add = false;
-    public $role, $password, $password_confirmation, $name, $email;
     public $rules = [
         'role' => 'required',
         'email' => 'required|email|unique:users',

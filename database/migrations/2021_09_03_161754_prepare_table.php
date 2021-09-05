@@ -36,7 +36,7 @@ class PrepareTable extends Migration
         Schema::create('peraturan',function (Blueprint $table){
            $table->id();
            $table->text('judul')->nullable();
-           $table->string('badans')->comment('T.E.U. Badan/Pengarang')->nullable();
+           $table->string('badan')->comment('T.E.U. Badan/Pengarang')->nullable();
             $table->string('nomor_peraturan')->nullable();
             $table->string('tempat_penetapan')->nullable();
             $table->integer('tahun')->nullable();
@@ -45,7 +45,6 @@ class PrepareTable extends Migration
             $table->enum('status',['Berlaku','Tidak Berlaku'])->nullable();
             $table->string('bahasa')->nullable();
             $table->string('lokasi')->nullable();
-            $table->string('tipe_peraturan')->nullable();
             $table->foreignId('created_by')->nullable();
             $table->foreignId('subjek_id')->nullable();
             $table->foreignId('tipe_peraturan_id')->nullable();

@@ -1,5 +1,5 @@
 <div>
-    <x-jet-button wire:click="$toggle('add')">
+    <x-jet-button wire:click="add">
         Tambah
     </x-jet-button>
     <x-jet-dialog-modal wire:model="add" class="text-center">

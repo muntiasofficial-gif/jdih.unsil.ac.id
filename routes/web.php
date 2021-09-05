@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::prefix('/')->group( function () {
+    Route::get('',\App\Http\Livewire\Guest\Home\View::class)->name('guest.home');
+    Route::get('inventarisasi',\App\Http\Livewire\Guest\Inventarisasi\View::class)->name('guest.inventaris');
+    Route::get('peraturan',\App\Http\Livewire\Guest\Peraturan\View::class)->name('guest.peraturan');
 });
 
 
@@ -25,6 +27,8 @@ Route::prefix('super-admin')->middleware(['auth:sanctum', 'verified','role:super
     Route::get('users', \App\Http\Livewire\SuperAdmin\Users::class )->name('user.list');
     Route::get('data-master',\App\Http\Livewire\SuperAdmin\DataMaster\View::class)->name('data-master');
     Route::get('peraturan',\App\Http\Livewire\SuperAdmin\Peraturan\View::class)->name('peraturan');
+    Route::get('peraturan/add',\App\Http\Livewire\SuperAdmin\Peraturan\Add::class)->name('peraturan.add');
+    Route::get('peraturan/edit/{peraturan_id}',\App\Http\Livewire\SuperAdmin\Peraturan\Add::class)->name('peraturan.edit');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

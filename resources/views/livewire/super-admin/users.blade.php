@@ -30,6 +30,7 @@
                                     </div>
                                     <div class="text-right">
                                         @livewire('super-admin.users.add',key('user-add'))
+                                        @livewire('super-admin.users.edit',key('user-edit'))
 {{--                                        @livewire('super-admin.users.roles',key('user-roles'))--}}
                                     </div>
                                 </div>
@@ -77,7 +78,7 @@
                                             <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">
                                                 <button onclick="confirm('Apakah anda yakin mereset password : {{$item->name}}') && @this.resetPassword({{$item->id}})">Reset Password</button>
                                                 |
-                                                <button wire:click="setUserId({{$item->id}})">Edit</button>
+                                                <button wire:click="$emit('editUser',{{$item->id}})">Edit</button>
                                                 |
                                                 <button
                                                     onclick="confirm('Apakah anda yakin menghapus: {{$item->name}}') && @this.removeUser({{$item->id}})">

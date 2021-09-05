@@ -24,7 +24,12 @@ class Navigation
             'peraturan' => 'Peraturan'
         ],
         'general' => [
-        ]
+        ],
+        'guest' => [
+            'guest.home' => 'Beranda',
+            'guest.peraturan' => 'Peraturan',
+            'guest.inventaris' => 'Inventarisasi',
+        ],
     ];
     //role
     static protected $except = [
@@ -52,5 +57,9 @@ class Navigation
             }
         }
         return $result;
+    }
+   static public function getGuest()
+    {
+        return self::$menus['guest'];
     }
 }

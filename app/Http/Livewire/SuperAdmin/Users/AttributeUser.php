@@ -4,11 +4,13 @@
 namespace App\Http\Livewire\SuperAdmin\Users;
 
 
+use App\Models\User;
+
 trait AttributeUser
 {
     public $role, $password, $password_confirmation, $name, $email;
 
-    public function mountAttribute()
+    public function mountAttribute(User $user)
     {
 
         $this->name = $user->name;

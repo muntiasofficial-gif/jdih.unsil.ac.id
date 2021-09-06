@@ -17,6 +17,9 @@ Route::prefix('/')->group( function () {
     Route::get('',\App\Http\Livewire\Guest\Home\View::class)->name('guest.home');
     Route::get('inventarisasi',\App\Http\Livewire\Guest\Inventarisasi\View::class)->name('guest.inventaris');
     Route::get('peraturan',\App\Http\Livewire\Guest\Peraturan\View::class)->name('guest.peraturan');
+    Route::middleware(['is_publish'])->group(function (){
+        Route::get('peraturan/view/{peraturan_id}',\App\Http\Livewire\Guest\Peraturan\Detail::class)->name('guest.peraturan.view');
+    });
 });
 
 

@@ -1,30 +1,56 @@
 <div>
-    <div>
-        <div class="flex flex-col">
-            <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                        <!-- This example requires Tailwind CSS v2.0+ -->
-                        <div class="bg-white shadow overflow-hidden sm:rounded-lg">
-                            <div class="px-4 py-5 sm:px-6">
-                                <h3 class="text-lg leading-6 font-medium text-gray-900">
-                                    {{__('STATISTIK PRODUK HUKUM')}}
-                                </h3>
-                                <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                                </p>
-                            </div>
-                            <div class="border-t border-gray-200">
-                                <dl>
-                                    <div class="bg-white px-4 py-5 sm:gap-4 sm:px-6">
-                                    </div>
-                                </dl>
-                            </div>
-                        </div>
-
-                    </div>
+    <x-default-card>
+        <x-slot name="title">
+            {{__('STATISTIK PRODUK HUKUM')}}
+        </x-slot>
+        <x-slot name="icon">
+            <x-heroicon-o-chart-bar class="flex-none w-16 h-7 w-7"/>
+        </x-slot>
+        <x-slot name="content">
+            <div class="p-3">
+                <div id="chart-tahun" class="w-full overflow-scroll">
                 </div>
             </div>
-        </div>
+        </x-slot>
+    </x-default-card>
 
-    </div>
+    <script>
+        Highcharts.chart('chart-tahun', {
+
+            chart: {
+                type: 'column'
+            },
+
+            title: {
+                text: ''
+            },
+
+            xAxis: {
+                categories: {!! $dataCategory !!}
+            },
+
+            yAxis: {
+                allowDecimals: false,
+                min: 0,
+                title: {
+                    text: 'Jumlah Peraturan Pertahun'
+                }
+            },
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.x + '</b> ' +
+                        this.series.name + ': ' + this.y;
+                }
+            },
+
+            plotOptions: {
+                column: {
+                    stacking: 'normal'
+                }
+            },
+
+            series: {!! $dataBar !!}
+        });
+
+    </script>
 </div>

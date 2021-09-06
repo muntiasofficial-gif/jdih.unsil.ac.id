@@ -26,12 +26,14 @@ class Peraturan extends Model
         'tipe_peraturan_id',
         'jenis_peraturan_id',
         'document_peraturan_id',
+        'is_publish'
     ];
 
     static public function tahun()
     {
         $year = self::orderBy('tahun','desc')->first();
-        $range = range($year->tahun ?? Carbon::now()->format('Y') - 10 ,Carbon::now()->format('Y'));
+        $initYear = $year->tahun >= (Carbon::now()->format('Y')-5) ? Carbon::now()->format('Y') - 10  : $year->tahun;
+        $range = range($initYear,Carbon::now()->format('Y'));
         return collect(array_combine($range,$range));
     }
     static public function status()

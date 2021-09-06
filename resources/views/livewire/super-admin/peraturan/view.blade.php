@@ -13,12 +13,12 @@
                                      class="col-span-3" nama="judul" type="text" title="Judul"/>
                     <x-default-select
                         :option="\App\Models\Kategori::all()->pluck('keterangan','id')->prepend('Pilih',' ')"
-                        name="kategori" title="Kategori"/>
+                        name="subjek_id" title="Kategori"/>
                     <x-default-select :option="\App\Models\Peraturan::tahun()->prepend('Pilih',' ')" name="tahun"
                                       title="Tahun"/>
                     <x-default-select
                         :option="\App\Models\JenisPeraturan::all()->pluck('keterangan','id')->prepend('Pilih',' ')"
-                        name="jenis_peraturan" title="Jenis"/>
+                        name="jenis_peraturan_id" title="Jenis"/>
                     <x-default-select :option="\App\Models\Peraturan::status()->prepend('Pilih',' ')" name="status"
                                       title="Status"/>
                     <x-default-input title="Nomor" nama="nomor_peraturan" type="text"/>

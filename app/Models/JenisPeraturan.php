@@ -12,4 +12,7 @@ class JenisPeraturan extends Model
     protected $fillable = [
         'keterangan'
     ];
+    public function peraturan(){
+        return $this->hasMany(Peraturan::class,'jenis_peraturan_id','id');
+    }
 }

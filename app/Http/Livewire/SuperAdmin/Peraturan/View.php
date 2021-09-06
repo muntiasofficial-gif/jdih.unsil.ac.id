@@ -9,8 +9,8 @@ use Livewire\WithPagination;
 
 class View extends Component
 {
-    public $judul, $tahun, $kategori, $jenis_peraturan, $status, $nomor_peraturan;
-    use WithPagination;
+    public $judul, $tahun, $subjek_id, $jenis_peraturan_id, $status, $nomor_peraturan;
+    use WithPagination,AttributePeraturan;
 
     public function render()
     {
@@ -20,14 +20,14 @@ class View extends Component
             ->when($this->tahun, function ($q) {
                 $q->where('tahun', $this->tahun);
             })
-            ->when($this->kategori, function ($q) {
-                $q->where('subjek_id', $this->kategori);
+            ->when($this->subjek_id, function ($q) {
+                $q->where('subjek_id', $this->subjek_id);
             })
-            ->when($this->jenis_peraturan, function ($q) {
-                $q->where('jenis_peraturan_id', $this->jenis_peraturan);
+            ->when($this->jenis_peraturan_id, function ($q) {
+                $q->where('jenis_peraturan_id', $this->jenis_peraturan_id);
             })
             ->when($this->nomor_peraturan, function ($q) {
-                $q->where('nomor_peraturan', 'like', '%' . $this->jenis_peraturan . '%');
+                $q->where('nomor_peraturan', 'like', '%' . $this->nomor_peraturan . '%');
             })
             ->paginate(10);
         return view('livewire.super-admin.peraturan.view')

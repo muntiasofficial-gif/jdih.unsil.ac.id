@@ -17,6 +17,7 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/page.js') }}" ></script>
 </head>
 <body class="font-sans antialiased">
 <x-jet-banner/>
@@ -45,7 +46,6 @@
 @livewireScripts
 <x-alert/>
 @stack('js')
-
 <script>
     function dropdown(value, data_value = "") {
         return {

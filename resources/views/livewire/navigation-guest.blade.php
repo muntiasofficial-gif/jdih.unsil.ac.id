@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="border-b border-gray-100" style="background: #4caf4f;">
+<nav x-data="{ open: false }" class="border-b border-gray-100 bg-white " >
     <div class=" mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
@@ -8,9 +8,8 @@
                         <x-jet-application-mark class="block h-9 w-auto"/>
                     </a>
                 </div>
-                <div
-                    class=" font-bold items-center px-1 mt-6 ml-3 text-4xl font-medium leading-5 text-white focus:outline-none focus:border-indigo-700 transition">
-                    {{env('APP_NAME')}}
+                <div class=" font-bold items-center px-1 mt-6 ml-3 text-4xl font-medium leading-5 text-black focus:outline-none focus:border-indigo-700 transition">
+{{--                    {{env('APP_NAME')}}--}}
                     {{--                    <br>--}}
                     {{--                    <p class="text-black">--}}
                     {{--                        {{env("SUB_APP_NAME")}}--}}

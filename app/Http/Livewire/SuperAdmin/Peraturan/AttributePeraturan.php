@@ -23,7 +23,8 @@ trait AttributePeraturan
         $subjek_id,
         $tipe_peraturan_id,
         $jenis_peraturan_id,
-        $document_peraturan_id;
+        $document_peraturan_id,
+        $is_publish;
 
     public function mountToAttribute(Peraturan $peraturan)
     {
@@ -40,8 +41,9 @@ trait AttributePeraturan
         $this->tanggal_diundangkan = $peraturan->tanggal_diundangkan;
         $this->bahasa = $peraturan->bahasa;
         $this->lokasi = $peraturan->lokasi;
+        $this->is_publish = $peraturan->is_publish;
         $this->document_peraturan_id = $peraturan->document_peraturan_id;
-        $this->document = asset('storage/'.$peraturan->dokumen->path);
+        $this->document = asset('storage/' . $peraturan->dokumen->path);
     }
 
 }

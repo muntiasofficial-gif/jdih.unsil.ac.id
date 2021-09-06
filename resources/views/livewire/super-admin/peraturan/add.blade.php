@@ -2,7 +2,9 @@
     @if($errors->any())
         <x-jet-banner style="danger" :message="$errors->all()"/>
     @endif
-    <x-slot name="header">{{__('Tambah Peraturan')}} <a href="{{route('peraturan')}}"><x-jet-secondary-button class="mx-3">kembali</x-jet-secondary-button></a></x-slot>
+    <x-slot name="header">{{__((!$peraturan_id ? "Tambah": "Ubah").' Peraturan')}} <a href="{{route('peraturan')}}">
+            <x-jet-secondary-button class="mx-3">kembali</x-jet-secondary-button>
+        </a></x-slot>
     <x-jet-action-section class="md:grid md:grid-cols-2 md:gap-6 grid-cols-2">
         <x-slot name="title"></x-slot>
         <x-slot name="description"></x-slot>
@@ -28,6 +30,19 @@
                 <x-default-input nama="tanggal_diundangkan" title="Tanggal ditetapkan" type="date"/>
                 <x-default-input nama="bahasa" title="Bahasa" type="text"/>
                 <x-default-input class="col-span-2" nama="lokasi" title="Lokasi" type="text"/>
+                <div class="my-2">
+                    <x-jet-label>
+                        Publish
+                    </x-jet-label>
+                    <div class="my-2 gap-4 flex">
+                        <div>
+                            <input type="radio" name="is_publish" wire:model="is_publish" value="1"/> Ya
+                        </div>
+                        <div>
+                            <input type="radio" name="is_publish" wire:model="is_publish" value="0"/> Tidak
+                        </div>
+                    </div>
+                </div>
                 <x-default-upload-file class="col-span-2" nama="document" :document="$document" title="Lokasi"
                                        type="file"/>
             </div>

@@ -20,7 +20,7 @@ class Navigation
         ],
         'super-admin' => [
             'data-master' => 'Data Master',
-            'user.list'=>'Pengguna',
+            'user.list' => 'Pengguna',
             'peraturan' => 'Peraturan'
         ],
         'general' => [
@@ -58,8 +58,14 @@ class Navigation
         }
         return $result;
     }
-   static public function getGuest()
+
+    static public function getGuest()
     {
+        if (\auth()->check()) {
+            self::$menus['guest']['dashboard'] = 'DASHBOARD';
+        } else {
+            self::$menus['guest']['login'] = 'MASUK';
+        }
         return self::$menus['guest'];
     }
 }

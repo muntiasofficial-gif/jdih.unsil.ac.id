@@ -4,11 +4,15 @@
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-    <div class="py-12">
-        <div class="mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
-            </div>
+    <div class=" mx-auto py-4 md:px-6 lg:px-8 grid md:grid-cols-3 gap-4">
+        <div class=" md:col-span-2">
+            @livewire('guest.peraturan.chart.tahun-without-status')
+        </div>
+        <div class="md:col-span-1">
+            @livewire('guest.peraturan.chart.pie-status')
+        </div>
+        <div class="md:col-span-3">
+            @livewire('guest.inventarisasi.tahun')
         </div>
     </div>
 </x-app-layout>

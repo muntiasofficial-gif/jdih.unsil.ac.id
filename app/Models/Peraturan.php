@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Peraturan extends Model
 {
     use HasFactory;
+
     protected $table = 'peraturan';
     protected $fillable = [
         'judul',
@@ -31,11 +32,16 @@ class Peraturan extends Model
 
     static public function tahun()
     {
-        $year = self::orderBy('tahun','desc')->first();
-        $initYear = $year->tahun >= (Carbon::now()->format('Y')-5) ? Carbon::now()->format('Y') - 10  : $year->tahun;
-        $range = range($initYear,Carbon::now()->format('Y'));
-        return collect(array_combine($range,$range));
+        $year = self::orderBy('tahun', 'desc')->first();
+        if ($year) {
+            $initYear = $year->tahun >= (Carbon::now()->format('Y') - 5) ? Carbon::now()->format('Y') - 10 : $year->tahun;
+        }else{
+            $initYear = Carbon::now()->format('Y') - 10;
+        }
+        $range = range($initYear, Carbon::now()->format('Y'));
+        return collect(array_combine($range, $range));
     }
+
     static public function status()
     {
         return collect([
@@ -43,19 +49,24 @@ class Peraturan extends Model
             'Tidak Berlaku' => 'Tidak Berlaku'
         ]);
     }
-    public function jenis(){
-        return $this->belongsTo(JenisPeraturan::class,'jenis_peraturan_id','id');
+
+    public function jenis()
+    {
+        return $this->belongsTo(JenisPeraturan::class, 'jenis_peraturan_id', 'id');
     }
+
     public function subjek()
     {
-        return $this->belongsTo(Kategori::class,'subjek_id','id');
+        return $this->belongsTo(Kategori::class, 'subjek_id', 'id');
     }
+
     public function tipe_peraturan()
     {
-        return $this->belongsTo(TipePeraturan::class,'tipe_peraturan_id','id');
+        return $this->belongsTo(TipePeraturan::class, 'tipe_peraturan_id', 'id');
     }
+
     public function dokumen()
     {
-        return $this->belongsTo(Document::class,'document_peraturan_id','id');
+        return $this->belongsTo(Document::class, 'document_peraturan_id', 'id');
     }
 }

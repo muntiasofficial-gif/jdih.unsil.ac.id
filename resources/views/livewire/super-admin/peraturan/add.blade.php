@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <x-default-upload-file class="col-span-2" nama="document" :document="$document" title="Lokasi"
+                <x-default-upload-file accept=".pdf" class="col-span-2" nama="document" :document="$document" title="Lokasi"
                                        type="file"/>
             </div>
             <div class="text-right mt-3">

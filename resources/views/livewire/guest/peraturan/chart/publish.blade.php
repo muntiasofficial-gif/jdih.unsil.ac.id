@@ -1,7 +1,7 @@
 <div>
     <x-default-card>
         <x-slot name="title">
-            {{__('REKAP PERATURAN PER-STATUS')}}
+            {{__('REKAP PERATURAN PER-PUBLISH')}}
         </x-slot>
         <x-slot name="icon">
             <x-heroicon-o-chart-bar class="flex-none w-16 h-7 w-7"/>

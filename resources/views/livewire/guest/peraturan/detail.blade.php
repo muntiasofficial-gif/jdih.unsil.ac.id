@@ -81,9 +81,9 @@
                         class="col-span-2" nama="lokasi" title="Lokasi" type="text"/>
                     <div>
                         <x-jet-label class="my-3">Dokumen
-                            <x-jet-button wire:click="unduh">unduh</x-jet-button>
                         </x-jet-label>
-                        <embed class="w-full h-screen" src="{{$document}}"/>
+                        <a href="{{$document}}" target="_blank" rel="noopener noreferrer"><x-jet-button>Lihat</x-jet-button></a>
+
                     </div>
 
                 </div>

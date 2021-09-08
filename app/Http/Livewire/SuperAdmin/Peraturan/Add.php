@@ -68,7 +68,7 @@ class Add extends Component
                 'document_peraturan_id' => $this->document_peraturan_id,
                 'created_by' => auth()->user()->getAuthIdentifier()
             ]);
-            if ($this->document){
+            if ($this->document && !is_string($this->document)){
 
                 $document = Document::create([
                     'path' => $this->document->store('doc')

@@ -14,11 +14,11 @@ class Publish extends Component
         $total = Peraturan::all()->count();
         $temp[] = [
             'name' => 'Peraturan Tidak di Publish',
-            'y' => Peraturan::where('is_publish', 1)->count(),
+            'y' => Peraturan::where('is_publish', 0)->count(),
         ];
         $temp[] = [
             'name' => 'Peraturan Publish',
-            'y' => Peraturan::where('is_publish', 0)->count(),
+            'y' => Peraturan::where('is_publish', 1)->count(),
         ];
         $this->dataPie = collect($temp)->toJson();
     }

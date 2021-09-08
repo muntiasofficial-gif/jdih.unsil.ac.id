@@ -56,51 +56,56 @@ class Upload extends Component
     public function prepare($data)
     {
         $existError = false;
-        foreach ($data[0] as $datum) {
+        foreach ($data[0] as $key => $datum) {
 
-            $tipe_peraturan = TipePeraturan::where('keterangan', @$datum[1])->first();
-            $kategori = Kategori::where('keterangan', @$datum[2])->first();
-            $jenis = JenisPeraturan::where('keterangan', @$datum[3])->first();
-            $not_found = "<p class='text-red-500'>data tidak ditemukan<p>";
-            $status = Peraturan::status(@$datum[4]);
+                $tipe_peraturan = TipePeraturan::where('keterangan', @$datum[1])->first();
+                $kategori = Kategori::where('keterangan', @$datum[2])->first();
+                $jenis = JenisPeraturan::where('keterangan', @$datum[3])->first();
+                $not_found = "<p class='text-red-500'>data tidak ditemukan<p>";
+                $status = Peraturan::status(@$datum[4]);
 
-            if (!$tipe_peraturan || !$kategori || !$jenis || @$status) {
-                $existError = true;
-            }
+                if (!$tipe_peraturan || !$kategori || !$jenis) {
+                    $existError = true;
+                }
 
-            $prepare[] = [
-                'judul' => @$datum[0],
-                'tipe_peraturan_id' => $tipe_peraturan ? $tipe_peraturan->id : $not_found,
-                'subjek_id' => $kategori ? $kategori->id : $not_found,
-                'jenis_keterangan_id' => $jenis ? $jenis->id : $not_found,
-                'status' => is_string($status) && !is_array($status) ? $status : $not_found,
-                'badan' => @$datum[5],
-                'nomor_peraturan' => @$datum[6],
-                'tempat_penetapan' => @$datum[7],
-                'tahun' => @$datum[8],
-                'tanggal_ditetapkan' => @$datum[9],
-                'tanggal_diundangkan' => @$datum[10],
-                'lokasi' => @$datum[11],
-            ];
+                $prepare[] = [
+                    'judul' => @$datum[0],
+                    'tipe_peraturan_id' => $tipe_peraturan ? $tipe_peraturan->id : $not_found,
+                    'subjek_id' => $kategori ? $kategori->id : $not_found,
+                    'jenis_peraturan_id' => $jenis ? $jenis->id : $not_found,
+                    'status' => is_string($status) && !is_array($status) ? $status : $not_found,
+                    'badan' => @$datum[5],
+                    'nomor_peraturan' => @$datum[6],
+                    'tempat_penetapan' => @$datum[7],
+                    'tahun' => @$datum[8],
+                    'tanggal_ditetapkan' => \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject(@$datum[9])->format('Y-m-d'),
+                    'tanggal_diundangkan' => \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject(@$datum[10])->format('Y-m-d'),
+                    'bahasa' => $datum[11],
+                    'lokasi' => @$datum[12],
+                    'is_publish' => @$datum[13],
+                ];
 
-            $viewPrepare[] = [
-                @$datum[0],
-                $tipe_peraturan ? $tipe_peraturan->id : $not_found,
-                $kategori ? $kategori->id : $not_found,
-                $jenis ? $jenis->id : $not_found,
-                is_string($status) && !is_array($status) ? $status : $not_found,
-                @$datum[5],
-                @$datum[6],
-                @$datum[7],
-                @$datum[8],
-                @$datum[9],
-                @$datum[10],
-                @$datum[11],
-            ];
+                $viewPrepare[] = [
+                    @$datum[0],
+                    $tipe_peraturan ? $tipe_peraturan->keterangan : $not_found,
+                    $kategori ? $kategori->keterangan : $not_found,
+                    $jenis ? $jenis->keterangan : $not_found,
+                    is_string($status) && !is_array($status) ? $status : $not_found,
+                    @$datum[5],
+                    @$datum[6],
+                    @$datum[7],
+                    @$datum[8],
+                    \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject(@$datum[9])->format('Y-m-d'),
+                    \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject(@$datum[10])->format('Y-m-d'),
+                    @$datum[11],
+                    @$datum[12],
+                    @$datum[13],
+
+                ];
         }
         if ($existError) {
             $this->errorMessage = __('Ada kesalahan, mohon cek kembali data di excel.');
-        }else{
+        } else {
             $this->errorMessage = false;
         }
 
@@ -116,8 +121,9 @@ class Upload extends Component
                 $peraturanRepo = new PeraturanRepo();
                 $peraturanRepo->create($request);
             }
-            $this->emit('alert',['tipe' => 'success','body' => 'Berhasil di import']);
-        }else{
+            $this->emit('alert', ['tipe' => 'success', 'body' => 'Berhasil di import']);
+            $this->redirectRoute('peraturan');
+        } else {
             $this->errorMessage = __('Data gagal disimpan, Ada kesalahan, mohon cek kembali data di excel.');
         }
 

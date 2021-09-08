@@ -11,7 +11,7 @@ trait AttributeUploadExcel
         'Tipe Peraturan',
         'Subjek',
         'Jenis',
-        'Status',
+        'Status (Berlaku / Tidak Berlaku)',
         'T.E.U. Badan/Pengarang',
         'Nomor Peraturan',
         'Tempat Penetapan',
@@ -20,6 +20,7 @@ trait AttributeUploadExcel
         'Tanggal diundangkan (dd-mm-yyyy)',
         'Bahasa',
         'Lokasi',
+        'Publish (1 = Ya / 0 = Tidak)'
     ];
 
 }

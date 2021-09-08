@@ -68,6 +68,15 @@ class Add extends Component
                 'document_peraturan_id' => $this->document_peraturan_id,
                 'created_by' => auth()->user()->getAuthIdentifier()
             ]);
+            if ($this->document){
+
+                $document = Document::create([
+                    'path' => $this->document->store('doc')
+                ]);
+                $request->merge([
+                    'document_peraturan_id' => $document->id,
+                ]);
+            }
             $result = $peraturanRepo->change($request, $this->peraturan_id);
 
         }

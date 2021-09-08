@@ -12,10 +12,14 @@
                     <dd class="text-sm py-3 px-4 pl-8 hover:bg-gray-100 text-gray-900 sm:mt-0 sm:col-span-3 flex gap-4">
                         <x-heroicon-o-document class="flex-none h-8 "/>
                         <div class="flex-grow ">
-                            <h3 class="text-lg font-bold text-blue-500">{{$item->jenis->keterangan." Nomor ".$item->nomor_peraturan." Tahun ".$item->tahun}}</h3>
+                            <h3 class="text-lg font-bold text-blue-500">{{@$item->jenis->keterangan." Nomor ".$item->nomor_peraturan." Tahun ".$item->tahun}}</h3>
                             <p>{{$item->judul}}</p>
-                            <p class="font-bold my-3">{{__('Subjek')}} : <span
-                                    class="bg-gray-700 text-white px-2 rounded">{{$item->subjek->keterangan}}</span></p>
+                            <p class="font-bold my-3">{{__('Subjek')}} :
+                                @if($item->subjek)
+                                    <span
+                                        class="bg-gray-700 text-white px-2 rounded">{{@$item->subjek->keterangan}}</span>
+                                @endif
+                            </p>
                         </div>
                     </dd>
                 </a>

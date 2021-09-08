@@ -38,7 +38,7 @@
                 <thead class="">
                 @foreach($table as $item)
                     <tr class="bg-gray-700 flex flex-col flex-no wrap sm:table-row text-xs rounded-l-lg sm:rounded-none mb-2 sm:mb-0 text-white">
-                        <th class="p-3 text-left  h-15 ">Nomor</th>
+                        <th class="p-3 text-left  h-15 ">Nomor Peraturan</th>
                         <th class="p-3 text-left  h-15">Tentang</th>
                         <th class="p-3 text-left  h-15">Status</th>
                         <th class="p-3 text-left  h-15">Jenis</th>
@@ -53,8 +53,8 @@
                         <td class="border-grey-light h-15 hover:bg-gray-100 p-3">{{$item->nomor_peraturan}}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->judul }}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->status }}</td>
-                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->jenis->keterangan }}</td>
-                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->subjek->keterangan }}</td>
+                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->jenis->keterangan }}</td>
+                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->subjek->keterangan }}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">
                             <a href="{{route('peraturan.edit',['peraturan_id' => $item->id])}}">
                                 <button>Edit</button>

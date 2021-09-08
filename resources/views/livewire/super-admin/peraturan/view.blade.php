@@ -28,7 +28,7 @@
                     <a href="{{route('peraturan.add')}}">
                         <x-jet-button> + Tambah Peraturan</x-jet-button>
                     </a>
-                    @livewire('super-admin.peraturan.upload',[],key('export-excel'))
+                    @livewire('super-admin.peraturan.upload',[],key('import-excel'))
                 </div>
             </x-slot>
         </x-jet-action-section>

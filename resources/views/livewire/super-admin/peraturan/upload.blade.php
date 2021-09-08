@@ -1,5 +1,5 @@
 <div class="float-right text-left ml-1">
-    <x-jet-button wire:click="$toggle('modal')">export excel</x-jet-button>
+    <x-jet-button wire:click="$toggle('modal')">import excel</x-jet-button>
     {{-- In work, do what you enjoy. --}}
     <x-jet-dialog-modal wire:model="modal">
         <x-slot name="title">

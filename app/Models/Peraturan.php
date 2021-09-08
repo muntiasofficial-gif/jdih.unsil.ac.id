@@ -42,12 +42,16 @@ class Peraturan extends Model
         return collect(array_combine($range, $range));
     }
 
-    static public function status()
+    static public function status($status = false)
     {
-        return collect([
+        $data = [
             'Berlaku' => 'Berlaku',
             'Tidak Berlaku' => 'Tidak Berlaku'
-        ]);
+        ];
+        if ($status){
+            return @$data[$status] ?? false;
+        }
+        return collect($data);
     }
 
     public function jenis()
@@ -62,7 +66,7 @@ class Peraturan extends Model
 
     public function tipe_peraturan()
     {
-        return $this->belongsTo(TipePeraturan::class, 'tipe_peraturan_id', 'id');
+        return $this->belongsTo(TipePeraturan::class,  'tipe_peraturan_id','id');
     }
 
     public function dokumen()

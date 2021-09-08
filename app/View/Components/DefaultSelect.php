@@ -10,12 +10,13 @@ class DefaultSelect extends Component
     public $value;
     public $multiple;
     public $title;
+    public $readonly;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $option, $value = "",$title,$multiple=false)
+    public function __construct($name, $option, $value = "",$title,$multiple=false,$readonly = false)
     {
         //
         $this->title = $title;
@@ -23,6 +24,7 @@ class DefaultSelect extends Component
         $this->option = $option;
         $this->value = $value;
         $this->multiple = $multiple;
+        $this->readonly = $readonly;
     }
 
     /**

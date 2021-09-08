@@ -15,11 +15,13 @@ class TextArea extends Component
     public $nama;
     public $type;
     public $title;
+    public $readonly;
 
-    public function __construct($nama, $title)
+    public function __construct($nama, $title,$readonly=  false)
     {
         $this->nama = $nama;
         $this->title = $title;
+        $this->readonly = $readonly;
         //
     }
 

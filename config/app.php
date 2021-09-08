@@ -177,6 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -236,6 +237,8 @@ return [
 
         'Form' => Collective\Html\FormFacde::class,
         'Html' => Collective\Html\HtmlFacde::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+
     ],
 
 ];

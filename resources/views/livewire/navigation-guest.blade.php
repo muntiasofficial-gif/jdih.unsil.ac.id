@@ -180,7 +180,7 @@
         <div class="pt-2 pb-3 space-y-1">
             @foreach(\App\Helpers\Navigation::getGuest() as $key => $item)
                 <x-jet-responsive-nav-link href="{{ route($key) }}" :active="request()->routeIs($key)">
-                    {{ __(ucfirst($item)) }}
+                    {{ __(strtoupper($item)) }}
                 </x-jet-responsive-nav-link>
             @endforeach
         </div>

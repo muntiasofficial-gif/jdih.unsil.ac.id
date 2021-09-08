@@ -12,14 +12,16 @@ class Select extends Component
     public $value;
     public $multiple;
     public $ids;
+    public $readonly;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $option, $value = "",$multiple=false)
+    public function __construct($name, $option, $value = "",$multiple=false,$readonly = false)
     {
         //
+        $this->readonly = $readonly;
         $this->name = $name;
         $this->option = $option;
         $this->value = $value;

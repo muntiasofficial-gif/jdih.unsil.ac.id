@@ -27,7 +27,8 @@ class Add extends Component
         'subjek_id' => 'required',
         'tipe_peraturan_id' => 'required',
         'jenis_peraturan_id' => 'required',
-        'is_publish' => 'required'
+        'is_publish' => 'required',
+        'lokasi' => 'required',
     ];
 
     public function mount(Request $request)

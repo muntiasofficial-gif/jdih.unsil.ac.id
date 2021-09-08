@@ -5,10 +5,12 @@ namespace App\Http\Livewire\SuperAdmin\Peraturan;
 
 
 use App\Models\Peraturan;
+use App\Models\TipePeraturan;
 
 trait AttributePeraturan
 {
     public $document;
+    public $jenis_peraturan,$subjek,$tipe_peraturan,$path_document;
 
     public $judul,
         $badan,
@@ -44,6 +46,9 @@ trait AttributePeraturan
         $this->is_publish = $peraturan->is_publish;
         $this->document_peraturan_id = $peraturan->document_peraturan_id;
         $this->document = asset('storage/' . $peraturan->dokumen->path);
+        $this->tipe_peraturan = TipePeraturan::find($peraturan->tipe_peraturan_id)->keterangan;
+        $this->jenis_peraturan = $peraturan->jenis->keterangan;
+        $this->subjek = $peraturan->subjek->keterangan;
     }
 
 }

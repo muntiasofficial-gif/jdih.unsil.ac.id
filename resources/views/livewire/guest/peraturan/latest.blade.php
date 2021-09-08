@@ -14,13 +14,16 @@
                         <div class="flex-grow ">
                             <h3 class="text-lg font-bold text-blue-500">{{$item->jenis->keterangan." Nomor ".$item->nomor_peraturan." Tahun ".$item->tahun}}</h3>
                             <p>{{$item->judul}}</p>
-                            <p class="font-bold my-3">{{__('Subjek')}} : <span class="bg-gray-700 text-white px-2 rounded">{{$item->subjek->keterangan}}</span></p>
+                            <p class="font-bold my-3">{{__('Subjek')}} : <span
+                                    class="bg-gray-700 text-white px-2 rounded">{{$item->subjek->keterangan}}</span></p>
                         </div>
                     </dd>
                 </a>
             @endforeach
         @else
-            {{__('Tidak data peraturan terbaru')}}
+            <div class="text-center py-2">
+                {{__('Tidak data peraturan terbaru')}}
+            </div>
         @endif
     </x-slot>
 </x-default-card>

@@ -9,7 +9,7 @@
         <div class="md:col-span-1">
             @livewire('guest.peraturan.chart.pie-status')
         </div>
-        <div class="md:col-span-3">
+        <div class="md:col-span-3 overflow-x-scroll">
             @livewire('guest.inventarisasi.tahun')
         </div>
     </div>

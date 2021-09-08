@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\SuperAdmin\Users;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
 class Add extends Component
@@ -22,7 +23,7 @@ class Add extends Component
         $prepare = [
             'email' => $data['email'],
             'name' => $data['name'],
-            'password' => $data['password'],
+            'password' => Hash::make($data['password']),
         ];
         $user = User::create($prepare);
         $user->assignRole(explode(',', $data['role']));

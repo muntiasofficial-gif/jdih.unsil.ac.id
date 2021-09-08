@@ -27,7 +27,7 @@
                 <x-default-input nama="tempat_penetapan" title="Tempat Penetapan" type="text"/>
                 <x-default-input nama="tahun" title="Tahun" type="number"/>
                 <x-default-input nama="tanggal_ditetapkan" title="Tanggal ditetapkan" type="date"/>
-                <x-default-input nama="tanggal_diundangkan" title="Tanggal ditetapkan" type="date"/>
+                <x-default-input nama="tanggal_diundangkan" title="Tanggal diundangkan" type="date"/>
                 <x-default-input nama="bahasa" title="Bahasa" type="text"/>
                 <x-default-input class="col-span-2" nama="lokasi" title="Lokasi" type="text"/>
                 <div class="my-2">

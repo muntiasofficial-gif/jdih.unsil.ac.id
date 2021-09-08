@@ -3,8 +3,10 @@
 namespace App\Http\Livewire\Guest\Peraturan;
 
 use App\Http\Livewire\SuperAdmin\Peraturan\AttributePeraturan;
+use App\Models\Document;
 use App\Repository\SuperAdmin\Peraturan\PeraturanRepo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 
 class Detail extends Component
@@ -26,5 +28,8 @@ class Detail extends Component
             $this->peraturan_id = $request->peraturan_id;
             $this->mountToAttribute($peraturan);
         }
+    }
+    public function unduh(){
+        return Storage::download(Document::find($this->document_peraturan_id)->path,$this->judul.'.pdf');
     }
 }

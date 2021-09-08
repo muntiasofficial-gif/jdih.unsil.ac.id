@@ -2,16 +2,23 @@
 
 namespace App\Http\Livewire\SuperAdmin\Peraturan;
 
+use App\Exports\ExampleImportPeraturan;
+use App\Imports\ImportPeraturan;
 use App\Models\Peraturan;
 use App\Repository\SuperAdmin\Peraturan\PeraturanRepo;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Maatwebsite\Excel\Excel;
 
 class View extends Component
 {
     public $judul, $tahun, $subjek_id, $jenis_peraturan_id, $status, $nomor_peraturan;
     use WithPagination,AttributePeraturan;
 
+    public function download()
+    {
+        return \Maatwebsite\Excel\Facades\Excel::download(new ImportPeraturan(),'example-import-peraturan.xlsx');
+    }
     public function render()
     {
         $table = Peraturan::when($this->judul, function ($q) {

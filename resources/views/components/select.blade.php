@@ -1,6 +1,10 @@
 <div>
     @if(!@$multiple)
-        {!! Form::select($name,$option,'',['wire:model'=>$name,'class' => 'w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50']) !!}
+        @if($readonly)
+            {!! Form::select($name,$option,'',['readonly'=>'true','wire:model'=>$name,'class' => 'w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50']) !!}
+        @else
+            {!! Form::select($name,$option,'',['wire:model'=>$name,'class' => 'w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50']) !!}
+        @endif
     @else
         <div>
             <style>

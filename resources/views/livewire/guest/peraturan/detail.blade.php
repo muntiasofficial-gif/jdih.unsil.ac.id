@@ -4,7 +4,7 @@
     @if($errors->any())
         <x-jet-banner style="danger" :message="$errors->all()"/>
     @endif
-    <x-slot name="header">{{__('Tambah Peraturan')}} <a href="{{route('guest.peraturan')}}">
+    <x-slot name="header">{{__('Detail Peraturan')}} <a href="{{route('guest.peraturan')}}">
             <x-jet-secondary-button class="mx-3">kembali</x-jet-secondary-button>
         </a></x-slot>
     <x-jet-action-section class="md:grid md:grid-cols-2 md:gap-6 grid-cols-2">

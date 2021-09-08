@@ -1,4 +1,4 @@
-<div>
+<div class="mx-auto sm:px-6 lg:px-8 py-3">
     @if($errors->any())
         <x-jet-banner style="danger" :message="$errors->all()"/>
     @endif

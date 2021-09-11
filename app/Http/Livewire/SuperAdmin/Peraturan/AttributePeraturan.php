@@ -48,8 +48,14 @@ trait AttributePeraturan
         if ($peraturan->dokumen) {
             $this->document = asset('storage/' . $peraturan->dokumen->path);
         }
-        $this->tipe_peraturan = TipePeraturan::find($peraturan->tipe_peraturan_id)->keterangan;
-        $this->jenis_peraturan = $peraturan->jenis->keterangan;
+
+        $tipe_peraturan = TipePeraturan::find($peraturan->tipe_peraturan_id);
+        if ($tipe_peraturan) {
+            $this->tipe_peraturan = $tipe_peraturan->keterangan;
+        }
+        if ($peraturan->jenis) {
+            $this->jenis_peraturan = $peraturan->jenis->keterangan;
+        }
         $this->subjek = $peraturan->subjek->keterangan;
     }
 

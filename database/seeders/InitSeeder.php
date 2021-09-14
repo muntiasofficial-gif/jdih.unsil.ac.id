@@ -21,7 +21,7 @@ class InitSeeder extends Seeder
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
 
         // Create Role
-        $general = Role::updateOrCreate(['name' => 'general']);
+//        $general = Role::updateOrCreate(['name' => 'general']);
         $superadmin = Role::updateOrCreate(['name' => 'super-admin']);
 
 
@@ -33,13 +33,13 @@ class InitSeeder extends Seeder
             'password' => Hash::make('password'),
         ]);
         $user->assignRole($superadmin);
-        $user = \App\Models\User::updateOrCreate([
-            'email' => 'general@gmail.com'], [
-            'name' => 'General User',
-            'email' => 'general@gmail.com',
-            'email_verified_at' => Carbon::now(),
-            'password' => Hash::make('password'),
-        ]);
-        $user->assignRole($general);
+//        $user = \App\Models\User::updateOrCreate([
+//            'email' => 'general@gmail.com'], [
+//            'name' => 'General User',
+//            'email' => 'gseneral@gmail.com',
+//            'email_verified_at' => Carbon::now(),
+//            'password' => Hash::make('password'),
+//        ]);
+//        $user->assignRole($general);
     }
 }

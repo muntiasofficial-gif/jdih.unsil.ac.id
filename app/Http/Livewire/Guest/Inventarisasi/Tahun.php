@@ -20,6 +20,7 @@ class Tahun extends Component
         foreach ($tahun as $item) {
             $this->header[] = $item;
         }
+        $result = [];
         foreach (JenisPeraturan::all() as $item) {
             foreach (Peraturan::status() as $status) {
                 $temp[0] = $item->keterangan;

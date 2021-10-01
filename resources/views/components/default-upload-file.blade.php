@@ -1,5 +1,7 @@
 <div {{$attributes->merge(['class' => 'mb-4'])    }}>
-    <x-jet-label for="{{$nama}}" value="{{__(ucfirst(str_replace('_',' ',$title)))}}" class="mb-2"/>
+    <x-jet-label for="{{$nama}}"  class="mb-2">
+        {!! $title !!}
+    </x-jet-label>
     <x-jet-input id="{{$nama}}" class="block mt-1 w-full " accept="{{$accept}}" type="file" name="{{$nama}}"
                  value="{{old($nama)}}"
                  required

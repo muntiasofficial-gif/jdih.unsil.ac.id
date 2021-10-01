@@ -43,7 +43,8 @@
                         </div>
                     </div>
                 </div>
-                <x-default-upload-file accept=".pdf" class="col-span-2" nama="document" :document="$document" title="Lokasi"
+                <x-jet-label></x-jet-label>
+                <x-default-upload-file accept=".pdf" class="col-span-2" nama="document" :document="$document" :title="'Document, <div class=\'text-red-500\'>Max Size File: '.ini_get('upload_max_filesize').'</div>'"
                                        type="file"/>
             </div>
             <div class="text-right mt-3">

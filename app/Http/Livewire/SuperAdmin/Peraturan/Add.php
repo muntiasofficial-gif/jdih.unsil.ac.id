@@ -29,6 +29,7 @@ class Add extends Component
         'jenis_peraturan_id' => 'required',
         'is_publish' => 'required',
         'lokasi' => 'required',
+        'document' => 'required|file|mimes:pdf'
     ];
 
     public function mount(Request $request)
@@ -85,6 +86,8 @@ class Add extends Component
         } else {
             $this->emit('alert', ['tipe' => 'danger', 'body' => 'Peraturan gagal disimpan.']);
         }
+        return $this->redirectRoute('peraturan');
+
     }
 
     public function upload()

@@ -26,7 +26,7 @@ trait AttributePeraturan
         $tipe_peraturan_id,
         $jenis_peraturan_id,
         $document_peraturan_id,
-        $is_publish;
+        $is_publish, $parent_id;
 
     public function mountToAttribute(Peraturan $peraturan)
     {
@@ -45,6 +45,9 @@ trait AttributePeraturan
         $this->lokasi = $peraturan->lokasi;
         $this->is_publish = $peraturan->is_publish;
         $this->document_peraturan_id = $peraturan->document_peraturan_id;
+        if ($this->status == Peraturan::BERLAKU) {
+            $this->parent_id = $peraturan->parent_id;
+        }
         if ($peraturan->dokumen) {
             $this->document = asset('storage/' . $peraturan->dokumen->path);
         }

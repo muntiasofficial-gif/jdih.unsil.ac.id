@@ -10,6 +10,9 @@ class Peraturan extends Model
 {
     use HasFactory;
 
+    const BERLAKU = 'Berlaku';
+    const TIDAK_BERLAKU = 'Tidak Berlaku';
+
     protected $table = 'peraturan';
     protected $fillable = [
         'judul',
@@ -27,7 +30,9 @@ class Peraturan extends Model
         'tipe_peraturan_id',
         'jenis_peraturan_id',
         'document_peraturan_id',
-        'is_publish'
+        'is_publish',
+        'count',
+        'parent_id'
     ];
 
     static public function tahun()
@@ -35,7 +40,7 @@ class Peraturan extends Model
         $year = self::orderBy('tahun', 'desc')->first();
         if ($year) {
             $initYear = $year->tahun >= (Carbon::now()->format('Y') - 5) ? Carbon::now()->format('Y') - 10 : $year->tahun;
-        }else{
+        } else {
             $initYear = Carbon::now()->format('Y') - 10;
         }
         $range = range($initYear, Carbon::now()->format('Y'));
@@ -45,10 +50,10 @@ class Peraturan extends Model
     static public function status($status = false)
     {
         $data = [
-            'Berlaku' => 'Berlaku',
-            'Tidak Berlaku' => 'Tidak Berlaku'
+            Peraturan::BERLAKU => 'Berlaku',
+            Peraturan::TIDAK_BERLAKU => 'Tidak Berlaku'
         ];
-        if ($status){
+        if ($status) {
             return @$data[$status] ?? false;
         }
         return collect($data);
@@ -66,7 +71,26 @@ class Peraturan extends Model
 
     public function tipe_peraturan()
     {
-        return $this->belongsTo(TipePeraturan::class,  'tipe_peraturan_id','id');
+        return $this->belongsTo(TipePeraturan::class, 'tipe_peraturan_id', 'id');
+    }
+
+    public function allParent()
+    {
+        return $this->parent()->with('allParent');
+    }
+    public function allChild()
+    {
+        return $this->child()->with('allChild');
+    }
+
+    public function parent()
+    {
+        return $this->belongsTo(Peraturan::class, 'parent_id', 'id');
+    }
+
+    public function child()
+    {
+        return $this->hasMany(Peraturan::class, 'parent_id', 'id');
     }
 
     public function dokumen()

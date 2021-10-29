@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\SuperAdmin\Peraturan;
 
 use App\Models\Document;
+use App\Models\Peraturan;
 use App\Repository\SuperAdmin\Peraturan\PeraturanRepo;
 use Illuminate\Http\Request;
 use Livewire\Component;
@@ -29,7 +30,7 @@ class Add extends Component
         'jenis_peraturan_id' => 'required',
         'is_publish' => 'required',
         'lokasi' => 'required',
-        'document' => 'required|file|mimes:pdf'
+        'document' => 'required|file|mimes:pdf',
     ];
 
     public function mount(Request $request)
@@ -50,6 +51,16 @@ class Add extends Component
 
     public function save(PeraturanRepo $peraturanRepo)
     {
+        if ($this->peraturan_id != null) {
+            unset($this->rules['document']);
+        } else {
+            $this->rules['document'] = 'required|file|mimes:pdf';
+        }
+        if ($this->status == Peraturan::BERLAKU){
+            $this->rules['parent_id'] = 'sometimes|nullable';
+        }else{
+            unset($this->rules['parent_id']);
+        }
         $data = $this->validate();
         $request = \Illuminate\Support\Facades\Request::merge($data);
         if (!$this->peraturan_id) {
@@ -69,7 +80,7 @@ class Add extends Component
                 'document_peraturan_id' => $this->document_peraturan_id,
                 'created_by' => auth()->user()->getAuthIdentifier()
             ]);
-            if ($this->document && !is_string($this->document)){
+            if ($this->document && !is_string($this->document)) {
 
                 $document = Document::create([
                     'path' => $this->document->store('doc')
@@ -82,7 +93,7 @@ class Add extends Component
 
         }
         if ($result) {
-            $this->emit('alert', ['tipe' => 'success', 'body' => 'Peraturan Berhasil '.($this->peraturan_id ? "diubah." : "disimpan.")]);
+            $this->emit('alert', ['tipe' => 'success', 'body' => 'Peraturan Berhasil ' . ($this->peraturan_id ? "diubah." : "disimpan.")]);
         } else {
             $this->emit('alert', ['tipe' => 'danger', 'body' => 'Peraturan gagal disimpan.']);
         }

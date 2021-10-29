@@ -21,6 +21,11 @@
                                   name="jenis_peraturan_id" title="Jenis"/>
                 <x-default-select :option="\App\Models\Peraturan::status()->prepend('Pilih',' ')" name="status"
                                   title="Status"/>
+                @if($status == \App\Models\Peraturan::BERLAKU)
+                    @php($opsi = \App\Models\Peraturan::when($peraturan_id,function ($q)use ($peraturan_id){$q->where('id','!=',$peraturan_id); })->pluck('judul','id')->prepend('Pilih',''))
+                    <x-default-select :option="$opsi" name="parent_id"
+                                      title="Produk hukum"/>
+                @endif
                 <x-text-area nama="judul" title="Judul" class="col-span-2"/>
                 <x-default-input nama="badan" title="T.E.U. Badan/Pengarang" type="text"/>
                 <x-default-input nama="nomor_peraturan" title="Nomor Peraturan" type="text"/>
@@ -44,7 +49,8 @@
                     </div>
                 </div>
                 <x-jet-label></x-jet-label>
-                <x-default-upload-file accept=".pdf" class="col-span-2" nama="document" :document="$document" :title="'Document, <div class=\'text-red-500\'>Max Size File: '.ini_get('upload_max_filesize').'</div>'"
+                <x-default-upload-file accept=".pdf" class="col-span-2" nama="document" :document="$document"
+                                       :title="'Document, <div class=\'text-red-500\'>Max Size File: '.ini_get('upload_max_filesize').'</div>'"
                                        type="file"/>
             </div>
             <div class="text-right mt-3">

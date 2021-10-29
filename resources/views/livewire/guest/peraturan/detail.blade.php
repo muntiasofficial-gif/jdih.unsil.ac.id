@@ -39,20 +39,23 @@
                 <x-card-view
                     readonly="true"
                     class="col-span-2" :value="$lokasi" title="Lokasi"/>
+                <x-card-view
+                    readonly="true"
+                    class="col-span-2" :value="$status" title="Status"/>
             </x-slot>
         </x-default-card>
     </div>
     <div class="mx-auto sm:px-6 lg:px-8 py-3">
         <x-default-card>
             <x-slot name="title">
-                {{__('STATUS PRODUK HUKUM')}}
+                {{__('HISTORI PRODUK HUKUM')}}
             </x-slot>
             <x-slot name="icon">
             </x-slot>
             <x-slot name="content">
-                <div class="p-3 pl-6">
-                    {!! $status !!}
-                </div>
+
+                <x-nested-card-view :item="$child" type="child"/>
+                <x-nested-card-view :item="$parent" type="parent"/>
             </x-slot>
         </x-default-card>
     </div>

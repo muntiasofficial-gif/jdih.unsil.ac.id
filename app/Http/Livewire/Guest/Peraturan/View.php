@@ -48,9 +48,21 @@ class View extends Component
             ->when($this->nomor_peraturan, function ($q) {
                 $q->where('nomor_peraturan', 'like', '%' . $this->nomor_peraturan . '%');
             })
-            ->where('is_publish',1)
+            ->where('is_publish', 1)
             ->paginate(10);
         return view('livewire.guest.peraturan.view')->with(compact('table'));
+    }
+
+    //count view
+    public function view($id)
+    {
+        $peraturan = Peraturan::findOrFail($id);
+        if ($peraturan->count == null) {
+            $peraturan->update();
+        } else {
+            $peraturan->increment('count');
+        }
+        return $this->redirectRoute('guest.peraturan.view', ['peraturan_id' => $id]);
     }
 
 

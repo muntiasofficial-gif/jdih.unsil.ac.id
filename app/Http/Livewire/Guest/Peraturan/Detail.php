@@ -14,6 +14,8 @@ class Detail extends Component
     use AttributePeraturan;
 
     public $peraturan_id;
+    public $child;
+    public $parent;
 
     public function render()
     {
@@ -25,11 +27,15 @@ class Detail extends Component
         if ($request->peraturan_id) {
             $peraturanRepo = new PeraturanRepo();
             $peraturan = $peraturanRepo->getById($request->peraturan_id);
+            $this->child = $peraturan->allChild;
+            $this->parent = $peraturan->allParent;
             $this->peraturan_id = $request->peraturan_id;
             $this->mountToAttribute($peraturan);
         }
     }
-    public function unduh(){
-        return Storage::download(Document::find($this->document_peraturan_id)->path,$this->judul.'.pdf');
+
+    public function unduh()
+    {
+        return Storage::download(Document::find($this->document_peraturan_id)->path, $this->judul . '.pdf');
     }
 }

@@ -13,45 +13,46 @@ class PrepareTable extends Migration
      */
     public function up()
     {
-        Schema::create('jenis_peraturan',function (Blueprint $table){
-           $table->id();
-           $table->text('keterangan')->nullable();
-           $table->timestamps();
+        Schema::create('jenis_peraturan', function (Blueprint $table) {
+            $table->id();
+            $table->text('keterangan')->nullable();
+            $table->timestamps();
         });
-        Schema::create('subjek',function (Blueprint $table){
-           $table->id();
-           $table->text('keterangan')->nullable();
-           $table->timestamps();
+        Schema::create('subjek', function (Blueprint $table) {
+            $table->id();
+            $table->text('keterangan')->nullable();
+            $table->timestamps();
         });
-        Schema::create('tipe_peraturan',function (Blueprint $table){
-           $table->id();
-           $table->text('keterangan')->nullable();
-           $table->timestamps();
+        Schema::create('tipe_peraturan', function (Blueprint $table) {
+            $table->id();
+            $table->text('keterangan')->nullable();
+            $table->timestamps();
         });
-        Schema::create('document_peraturan',function (Blueprint $table){
-           $table->id();
-           $table->text('path')->nullable();
-           $table->timestamps();
+        Schema::create('document_peraturan', function (Blueprint $table) {
+            $table->id();
+            $table->text('path')->nullable();
+            $table->timestamps();
         });
-        Schema::create('peraturan',function (Blueprint $table){
-           $table->id();
-           $table->text('judul')->nullable();
-           $table->string('badan')->comment('T.E.U. Badan/Pengarang')->nullable();
+        Schema::create('peraturan', function (Blueprint $table) {
+            $table->id();
+            $table->text('judul')->nullable();
+            $table->string('badan')->comment('T.E.U. Badan/Pengarang')->nullable();
             $table->string('nomor_peraturan')->nullable();
             $table->string('tempat_penetapan')->nullable();
             $table->integer('tahun')->nullable();
             $table->date('tanggal_ditetapkan')->nullable();
             $table->date('tanggal_diundangkan')->nullable();
-            $table->enum('status',['Berlaku','Tidak Berlaku'])->nullable();
+            $table->enum('status', ['Berlaku', 'Tidak Berlaku'])->nullable();
             $table->string('bahasa')->nullable();
             $table->string('lokasi')->nullable();
+            $table->bigInteger('count')->nullable();
             $table->foreignId('created_by')->nullable();
             $table->foreignId('subjek_id')->nullable();
             $table->foreignId('tipe_peraturan_id')->nullable();
             $table->foreignId('jenis_peraturan_id')->nullable();
             $table->foreignId('document_peraturan_id')->nullable();
+            $table->foreignId('parent_id')->nullable()->comment('peraturan yang berkaitan');
             $table->timestamps();
-
             $table->foreign('created_by')
                 ->references('id')
                 ->on('users')

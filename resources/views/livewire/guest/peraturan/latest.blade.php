@@ -8,8 +8,8 @@
     <x-slot name="content">
         @if($data->count())
             @foreach($data as $item)
-                <a href="{{route('guest.peraturan.view',['peraturan_id' => $item->id])}}">
-                    <dd class="text-sm py-3 px-4 pl-8 hover:bg-gray-100 text-gray-900 sm:mt-0 sm:col-span-3 flex gap-4">
+{{--                <a href="{{route('guest.peraturan.view',['peraturan_id' => $item->id])}}">--}}
+                    <dd wire:click="view({{$item->id}})" class="text-sm py-3 px-4 pl-8 hover:bg-gray-100 text-gray-900 sm:mt-0 sm:col-span-3 flex gap-4">
                         <x-heroicon-o-document class="flex-none h-8 "/>
                         <div class="flex-grow ">
                             <h3 class="text-lg font-bold text-blue-500">{{@$item->jenis->keterangan." Nomor ".$item->nomor_peraturan." Tahun ".$item->tahun}}</h3>
@@ -22,7 +22,7 @@
                             </p>
                         </div>
                     </dd>
-                </a>
+{{--                </a>--}}
             @endforeach
         @else
             <div class="text-center py-2">

@@ -34,29 +34,29 @@
         </x-jet-action-section>
         @if($table->count() > 0)
             <table
-                class="w-full flex flex-row flex-no-wrap sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
+                class="w-full table-fixed sm:bg-white rounded-lg overflow-hidden sm:shadow-lg my-5">
                 <thead class="">
-                @foreach($table as $key => $item)
-                    <tr class="bg-gray-700 flex flex-col flex-no wrap sm:table-row text-xs rounded-l-lg sm:rounded-none mb-2 sm:mb-0 text-white">
-                        <th class="p-3 text-left  h-15 ">#</th>
-                        <th class="p-3 text-left  h-15 ">Nomor Peraturan</th>
-                        <th class="p-3 text-left  h-15">Tentang</th>
-                        <th class="p-3 text-left  h-15">Status</th>
-                        <th class="p-3 text-left  h-15">Jenis</th>
-                        <th class="p-3 text-left  h-15">Kategori</th>
-                        <th class="p-3 text-left  h-15">Aksi</th>
+                    <tr class="bg-gray-700 sm:table-row text-xs rounded-l-lg sm:rounded-none mb-2 sm:mb-0 text-white">
+                        <th class="p-3 text-left  h-15" style="width: 5% !important;">#</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%">Nomor Peraturan</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 30%;">Tentang</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Status</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Jenis</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Kategori</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Dilihat</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 30%;">Aksi</th>
                     </tr>
-                @endforeach
                 </thead>
                 <tbody class="flex-1 sm:flex-none">
                 @foreach($table as $key => $item)
-                    <tr class="flex flex-col flex-no wrap sm:table-row text-xs mb-2 sm:mb-0 bg-white">
+                    <tr class="sm:table-row text-xs mb-2 sm:mb-0 bg-white">
                         <td class="border-grey-light h-15 hover:bg-gray-100 p-3">{{$table->firstItem() + $key}}</td>
                         <td class="border-grey-light h-15 hover:bg-gray-100 p-3">{{$item->nomor_peraturan}}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->judul }}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->status }}</td>
-                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->jenis->keterangan }}</td>
-                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->subjek->keterangan }}</td>
+                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->jenis->keterangan ?? ''}}</td>
+                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->subjek->keterangan ?? '' }}</td>
+                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->count ?? '0' }}x</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">
                             <a href="{{route('peraturan.edit',['peraturan_id' => $item->id])}}">
                                 <button>Edit</button>

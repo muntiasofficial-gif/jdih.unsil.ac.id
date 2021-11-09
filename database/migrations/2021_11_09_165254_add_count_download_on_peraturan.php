@@ -13,8 +13,8 @@ class AddCountDownloadOnPeraturan extends Migration
      */
     public function up()
     {
-        Schema::table('peraturan',function (Blueprint $table){
-            $table->bigInteger("count_download");
+        Schema::table('peraturan', function (Blueprint $table) {
+            $table->bigInteger("count_download")->default(0)->nullable();
         });
         //
     }

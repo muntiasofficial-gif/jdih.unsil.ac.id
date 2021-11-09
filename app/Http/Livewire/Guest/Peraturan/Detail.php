@@ -38,7 +38,7 @@ class Detail extends Component
     public function addCount()
     {
         $peraturan = Peraturan::findOrFail($this->peraturan_id);
-        if ($peraturan->count == null) {
+        if ($peraturan->count_download == null) {
             $peraturan->update(['count_download' => 1]);
         } else {
             $peraturan->increment('count_download');

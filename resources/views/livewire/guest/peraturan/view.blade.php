@@ -27,7 +27,6 @@
                             name="status"
                             title="Status"/>
                         <x-default-input
-
                             title="Nomor" nama="nomor_peraturan" type="text"/>
                     </div>
                     <div class="text-right">

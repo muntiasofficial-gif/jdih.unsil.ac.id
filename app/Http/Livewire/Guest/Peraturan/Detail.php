@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Guest\Peraturan;
 
 use App\Http\Livewire\SuperAdmin\Peraturan\AttributePeraturan;
 use App\Models\Document;
+use App\Models\Peraturan;
 use App\Repository\SuperAdmin\Peraturan\PeraturanRepo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -31,6 +32,16 @@ class Detail extends Component
             $this->parent = $peraturan->allParent;
             $this->peraturan_id = $request->peraturan_id;
             $this->mountToAttribute($peraturan);
+        }
+    }
+
+    public function addCount()
+    {
+        $peraturan = Peraturan::findOrFail($this->peraturan_id);
+        if ($peraturan->count == null) {
+            $peraturan->update(['count_download' => 1]);
+        } else {
+            $peraturan->increment('count_download');
         }
     }
 

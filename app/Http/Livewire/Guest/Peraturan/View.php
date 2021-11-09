@@ -58,7 +58,7 @@ class View extends Component
     {
         $peraturan = Peraturan::findOrFail($id);
         if ($peraturan->count == null) {
-            $peraturan->update();
+            $peraturan->update(['count' => 1]);
         } else {
             $peraturan->increment('count');
         }

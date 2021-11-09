@@ -43,7 +43,8 @@
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Status</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Jenis</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Kategori</th>
-                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Dilihat</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Dilihat Peraturan</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Dilihat Dokumen</th>
                         <th class="p-3 text-left  h-15" style="max-width: 30%;">Aksi</th>
                     </tr>
                 </thead>
@@ -57,6 +58,7 @@
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->jenis->keterangan ?? ''}}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->subjek->keterangan ?? '' }}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->count ?? '0' }}x</td>
+                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->count_download ?? '0' }}x</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">
                             <a href="{{route('peraturan.edit',['peraturan_id' => $item->id])}}">
                                 <button>Edit</button>

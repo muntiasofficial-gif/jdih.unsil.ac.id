@@ -32,6 +32,7 @@ class Peraturan extends Model
         'document_peraturan_id',
         'is_publish',
         'count',
+        'count_download',
         'parent_id'
     ];
 

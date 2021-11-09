@@ -71,9 +71,13 @@
                     <div class="grid grid-cols-3 gap-4">
                         <x-jet-label class="my-3">Dokumen
                         </x-jet-label>
-                        <a class="col-span-2" href="{{$document}}" target="_blank" rel="noopener noreferrer">
-                            <x-jet-button>Lihat</x-jet-button>
-                        </a>
+                        @if($document)
+                            <a class="col-span-2" wire:click="addCount" href="{{$document}}" target="_blank" rel="noopener noreferrer">
+                                <x-jet-button>Lihat</x-jet-button>
+                            </a>
+                        @else
+                            tidak ada dokumen
+                        @endif
                     </div>
                 </div>
             </x-slot>

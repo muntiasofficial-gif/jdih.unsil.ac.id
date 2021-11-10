@@ -24,6 +24,8 @@ class Navigation
             'peraturan' => 'Peraturan'
         ],
         'general' => [
+            'data-master' => 'Data Master',
+            'peraturan' => 'Peraturan'
         ],
         'guest' => [
             'guest.home' => 'Beranda',

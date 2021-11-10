@@ -22,9 +22,18 @@
                 <x-default-select :option="\App\Models\Peraturan::status()->prepend('Pilih',' ')" name="status"
                                   title="Status"/>
                 @if($status == \App\Models\Peraturan::BERLAKU)
-                    @php($opsi = \App\Models\Peraturan::when($peraturan_id,function ($q)use ($peraturan_id){$q->where('id','!=',$peraturan_id); })->pluck('judul','id')->prepend('Pilih',''))
-                    <x-default-select :option="$opsi" name="parent_id"
-                                      title="Produk hukum"/>
+                    <div class="mb-4">
+                        <x-jet-label class="mb-2">
+                            Produk Hukum
+                        </x-jet-label>
+                    @livewire('peraturan-select',[
+                    'name'=>'parent_id',
+                    'value'=>$parent_id,
+                    'peraturan_id'=>$peraturan_id,
+                    'searchable'=>'true',
+                    'placeholder'=>'Pilih Produk Hukum'
+                    ],key('peraturan-select'))
+                    </div>
                 @endif
                 <x-text-area nama="judul" title="Judul" class="col-span-2"/>
                 <x-default-input nama="badan" title="T.E.U. Badan/Pengarang" type="text"/>

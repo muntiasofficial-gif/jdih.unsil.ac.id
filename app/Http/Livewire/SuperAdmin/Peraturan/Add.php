@@ -32,6 +32,16 @@ class Add extends Component
         'lokasi' => 'required',
         'document' => 'required|file|mimes:pdf',
     ];
+    protected $listeners = [
+        'peraturan_select'
+    ];
+
+    public function peraturan_select($id)
+    {
+        $this->parent_id = $id;
+        $this->emit("alert", ['body' => 'Peraturan berhasil terpilih.', 'tipe' => 'success']);
+    }
+
 
     public function mount(Request $request)
     {
@@ -56,9 +66,9 @@ class Add extends Component
         } else {
             $this->rules['document'] = 'required|file|mimes:pdf';
         }
-        if ($this->status == Peraturan::BERLAKU){
+        if ($this->status == Peraturan::BERLAKU) {
             $this->rules['parent_id'] = 'sometimes|nullable';
-        }else{
+        } else {
             unset($this->rules['parent_id']);
         }
         $data = $this->validate();

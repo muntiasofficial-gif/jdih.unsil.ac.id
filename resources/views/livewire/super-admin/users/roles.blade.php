@@ -1,7 +1,7 @@
 <div>
-    {{--    <x-jet-button wire:click="$set('add',true)" class="mt-2">--}}
-    {{--        Atur Role--}}
-    {{--    </x-jet-button>--}}
+        <x-jet-button wire:click="$set('add',true)" class="mt-2">
+            Atur Role
+        </x-jet-button>
     <x-jet-dialog-modal wire:model="add" class="text-center">
         <x-slot name="title">
             <div class="text-center">

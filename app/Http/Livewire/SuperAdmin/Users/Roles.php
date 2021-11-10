@@ -32,6 +32,7 @@ class Roles extends Component implements DataMasterInterface
     {
         app()[\Spatie\Permission\PermissionRegistrar::class]->forgetCachedPermissions();
         $data = $this->validate();
+        $data['guard_name'] = 'web';
         if ($this->idRole) {
             $role = Role::find($this->idRole);
             $role->update($data);

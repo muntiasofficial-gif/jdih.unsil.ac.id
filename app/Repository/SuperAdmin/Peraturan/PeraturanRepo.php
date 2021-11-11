@@ -20,7 +20,7 @@ class PeraturanRepo implements PeraturanRepoInterface
         try {
             $input = $request->only((new Peraturan())->getFillable());
             if ($input['status'] == Peraturan::BERLAKU) {
-                if ($input['parent_id']) Peraturan::findOrFail($input['parent_id'])->update(['status' => Peraturan::TIDAK_BERLAKU]);
+                if (@$input['parent_id']) Peraturan::findOrFail($input['parent_id'])->update(['status' => Peraturan::TIDAK_BERLAKU]);
             }
             $peraturan = Peraturan::create($input);
             DB::commit();

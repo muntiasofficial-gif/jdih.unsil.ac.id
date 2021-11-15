@@ -17,27 +17,31 @@
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
-    <script src="{{ mix('js/page.js') }}" ></script>
+    <script src="{{ mix('js/page.js') }}"></script>
 </head>
 <body class="font-sans antialiased">
 <x-jet-banner/>
 <div class="min-h-screen bg-gray-100">
-    @if(@$guest !== null)
-        @livewire('navigation-guest')
-    @else
-        @livewire('navigation-menu')
-    @endif
+    <div class="fixed w-full z-20">
+        @if(@$guest !== null)
+            @livewire('navigation-guest')
+        @else
+            @livewire('navigation-menu')
+        @endif
+    </div>
     <!-- Page Heading -->
-    @if (@$header)
-        <header class="bg-white shadow">
-            <div class=" mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
-            </div>
-        </header>
-@endif
+    <div class="pt-32">
+        @if (@$header)
+            <header class="bg-white shadow">
+                <div class=" mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
+        @endif
+    </div>
 
-<!-- Page Content -->
-    <main>
+    <!-- Page Content -->
+    <main class="z-0">
         {{ $slot }}
     </main>
 </div>

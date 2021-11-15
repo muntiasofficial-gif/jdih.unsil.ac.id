@@ -13,12 +13,13 @@ use Maatwebsite\Excel\Excel;
 class View extends Component
 {
     public $judul, $tahun, $subjek_id, $jenis_peraturan_id, $status, $nomor_peraturan;
-    use WithPagination,AttributePeraturan;
+    use WithPagination, AttributePeraturan;
 
     public function download()
     {
-        return \Maatwebsite\Excel\Facades\Excel::download(new ImportPeraturan(),'example-import-peraturan.xlsx');
+        return \Maatwebsite\Excel\Facades\Excel::download(new ImportPeraturan(), 'example-import-peraturan.xlsx');
     }
+
     public function render()
     {
         $table = Peraturan::when($this->judul, function ($q) {
@@ -36,6 +37,7 @@ class View extends Component
             ->when($this->nomor_peraturan, function ($q) {
                 $q->where('nomor_peraturan', 'like', '%' . $this->nomor_peraturan . '%');
             })
+            ->latest()
             ->paginate(10);
         return view('livewire.super-admin.peraturan.view')
             ->with(compact('table'));

@@ -22,7 +22,7 @@
 <body class="font-sans antialiased">
 <x-jet-banner/>
 <div class="min-h-screen bg-gray-100">
-    <div class="fixed w-full z-20">
+    <div class=" w-full z-20" >
         @if(@$guest !== null)
             @livewire('navigation-guest')
         @else
@@ -30,7 +30,7 @@
         @endif
     </div>
     <!-- Page Heading -->
-    <div class="pt-32">
+    <div class="">
         @if (@$header)
             <header class="bg-white shadow">
                 <div class=" mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -119,6 +119,19 @@
             }
         }
     }
+    window.onscroll = changePos;
+
+    function changePos() {
+        var header = document.getElementById("header");
+        if (window.pageYOffset > 70) {
+            header.style.position = "fixed";
+            header.style.top = "0";
+        } else {
+            header.style.position = "";
+            header.style.top = "";
+        }
+    }
+
 </script>
 </body>
 </html>

@@ -74,8 +74,6 @@
                     this.options[index].selected = true;
                     // this.options[index].element = event.target;
                     this.selected.push(index);
-
-
                 } else {
                     this.selected.splice(this.selected.lastIndexOf(index), 1);
                     this.options[index].selected = false

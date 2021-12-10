@@ -8,14 +8,14 @@
             @if($errorMessage)
                 <x-jet-banner style="danger" :message="$errorMessage"/>
             @endif
-            <div class="grid grid-cols-3">
+            <div class="flex gap-2">
                 <x-default-input class="col-span-2"
                                  nama="excel" title="File"
                                  :accept="'.xlsx'"
                                  type="file"
                                  change="getData"/>
-                <div class="py-6">
-                    <x-jet-button wire:click="getData">preview</x-jet-button>
+                <div class="py-6 flex gap-2">
+                    <x-jet-button wire:click="getData"><x-spinner wire:target="getData"/>preview</x-jet-button>
                     <x-jet-button class="bg-blue-500" wire:click="download">Format Upload Excel</x-jet-button>
                 </div>
             </div>

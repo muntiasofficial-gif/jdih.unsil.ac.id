@@ -1,7 +1,7 @@
-<div>
+<div class="">
     <!-- Toast Container -->
     <!-- put taost notification in here , to cope when the toast more than one -->
-    <div class="fixed right-0 top-0 m-5">
+    <div class="fixed right-0 top-0 m-5 z-30">
         <!-- Toast Notification Success-->
         <div class="flex items-center bg-green-500 border-l-4 border-green-700 py-2 px-3 shadow-md mb-2 hidden py-2" id="success">
             <!-- icons -->

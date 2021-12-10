@@ -24,14 +24,14 @@
                 @if($status == \App\Models\Peraturan::BERLAKU)
                     <div class="mb-4">
                         <x-jet-label class="mb-2">
-                            Produk Hukum
+                            Produk Hukum (optional)
                         </x-jet-label>
                     @livewire('peraturan-select',[
                     'name'=>'parent_id',
                     'value'=>$parent_id,
                     'peraturan_id'=>$peraturan_id,
                     'searchable'=>'true',
-                    'placeholder'=>'Pilih Produk Hukum'
+                    'placeholder'=>'Cari Produk Hukum'
                     ],key('peraturan-select'))
                     </div>
                 @endif

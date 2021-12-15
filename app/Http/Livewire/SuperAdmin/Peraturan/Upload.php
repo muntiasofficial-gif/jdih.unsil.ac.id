@@ -48,6 +48,9 @@ class Upload extends Component
     public function prepare($data)
     {
         $existError = false;
+        if (!$data[0]) {
+            $data[0] = [];
+        }
         foreach ($data[0] as $key => $datum) {
             $tipe_peraturan = TipePeraturan::where('keterangan', @$datum[1])->first();
             $kategori = Kategori::where('keterangan', @$datum[2])->first();

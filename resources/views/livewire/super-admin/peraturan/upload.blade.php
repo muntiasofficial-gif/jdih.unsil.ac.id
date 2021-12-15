@@ -40,7 +40,7 @@
                                         </thead>
                                         <tbody class="bg-white divide-y divide-gray-200">
 
-                                        @foreach($data[0] as $item)
+                                        @foreach($data[0] ?? [] as $item)
                                             <tr>
                                                 @foreach($item as $i)
                                                     <td class="px-6 py-4 whitespace-nowrap">

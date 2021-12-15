@@ -10,6 +10,7 @@ use App\Models\Peraturan;
 use App\Models\TipePeraturan;
 use App\Repository\SuperAdmin\Peraturan\PeraturanRepo;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
@@ -70,8 +71,8 @@ class Upload extends Component
                 'nomor_peraturan' => @$datum[6],
                 'tempat_penetapan' => @$datum[7],
                 'tahun' => @$datum[8],
-                'tanggal_ditetapkan' => Carbon::parse(@$datum[9])->format('Y-m-d'),
-                'tanggal_diundangkan' => Carbon::parse(@$datum[10])->format('Y-m-d'),
+                'tanggal_ditetapkan' => $this->parsingDate($datum[9]),
+                'tanggal_diundangkan' => $this->parsingDate($datum[10]),
                 'bahasa' => $datum[11],
                 'lokasi' => @$datum[12],
                 'is_publish' => @$datum[13],
@@ -86,8 +87,8 @@ class Upload extends Component
                 @$datum[6],
                 @$datum[7],
                 @$datum[8],
-                Carbon::parse(@$datum[9])->format("d-m-Y"),
-                Carbon::parse(@$datum[10])->format("d-m-Y"),
+                $this->parsingDate($datum[9]),
+                $this->parsingDate($datum[10]),
                 @$datum[11],
                 @$datum[12],
                 @$datum[13],
@@ -101,6 +102,16 @@ class Upload extends Component
 
         $this->data[0] = @$viewPrepare;
         $this->tempData = @$prepare;
+    }
+
+    private function parsingDate($date,$format = "Y-m-d")
+    {
+        if (is_int($date)) {
+            $result = \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($date);
+        } else {
+            $result = Carbon::parse(@$date);
+        }
+        return $result->format($format);
     }
 
     public function download()

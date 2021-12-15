@@ -32,7 +32,7 @@
     <!-- Page Heading -->
     <div class="">
         @if (@$header)
-            <header class="bg-white shadow">
+            <header class="bg-white shadow " id="navigation-title">
                 <div class=" mx-auto py-6 px-4 sm:px-6 lg:px-8">
                     {{ $header }}
                 </div>
@@ -123,12 +123,18 @@
 
     function changePos() {
         var header = document.getElementById("header");
+        var navigation = document.getElementById("navigation-title");
         if (window.pageYOffset > 70) {
             header.style.position = "fixed";
             header.style.top = "0";
+            navigation.style.marginTop = "4rem";
+            navigation.style.position = "relative";
         } else {
             header.style.position = "";
             header.style.top = "";
+
+            navigation.style.marginTop = "";
+            navigation.style.position = "";
         }
     }
 

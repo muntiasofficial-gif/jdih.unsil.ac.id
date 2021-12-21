@@ -37,6 +37,8 @@
                     {{ $header }}
                 </div>
             </header>
+        @else
+            <div id="navigation-title"></div>
         @endif
     </div>
 
@@ -124,6 +126,7 @@
     function changePos() {
         var header = document.getElementById("header");
         var navigation = document.getElementById("navigation-title");
+        console.log(navigation)
         if (window.pageYOffset > 70) {
             header.style.position = "fixed";
             header.style.top = "0";

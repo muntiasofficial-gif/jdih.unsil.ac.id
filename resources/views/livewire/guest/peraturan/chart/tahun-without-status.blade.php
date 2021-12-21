@@ -8,7 +8,7 @@
         </x-slot>
         <x-slot name="content">
             <div class="p-3">
-                <div id="chart-tahun-without-status" class="w-full overflow-scroll">
+                <div id="chart-tahun-without-status" class="w-full overflow-scroll z-0 relative">
                 </div>
             </div>
         </x-slot>
@@ -22,7 +22,6 @@
                 spacingTop: 10,
                 spacingLeft: -20,
                 spacingRight: 10,
-
                 type: 'column',
                 options3d: {
                     enabled: true,

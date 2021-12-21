@@ -43,7 +43,7 @@
     </div>
 
     <!-- Page Content -->
-    <main class="z-0">
+    <main class="z-30">
         {{ $slot }}
     </main>
 </div>
@@ -129,6 +129,7 @@
         if (window.pageYOffset > 70) {
             header.style.position = "fixed";
             header.style.top = "0";
+            header.style.zIndex = 100;
             navigation.style.marginTop = "4rem";
             navigation.style.position = "relative";
         } else {

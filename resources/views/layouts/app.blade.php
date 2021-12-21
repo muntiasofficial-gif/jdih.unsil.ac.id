@@ -130,7 +130,7 @@
             header.style.position = "fixed";
             header.style.top = "0";
             header.style.zIndex = 100;
-            navigation.style.marginTop = "4rem";
+            navigation.style.marginTop = "4.45rem";
             navigation.style.position = "relative";
         } else {
             header.style.position = "";

@@ -15,6 +15,8 @@ class Add extends Component
 
     public $peraturan_id = null;
     public $document;
+    public $draft;
+    public $jenis_draft;
     public $rules = [
         'judul' => 'required',
         'badan' => 'required',
@@ -29,6 +31,8 @@ class Add extends Component
         'tipe_peraturan_id' => 'required',
         'jenis_peraturan_id' => 'required',
         'is_publish' => 'required',
+        'draft' => 'required',
+        'jenis_draft' => 'required',
         'lokasi' => 'required',
         'document' => 'required|file|mimes:pdf',
     ];

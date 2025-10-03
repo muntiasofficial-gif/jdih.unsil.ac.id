@@ -21,6 +21,10 @@
                         name="jenis_peraturan_id" title="Jenis"/>
                     <x-default-select :option="\App\Models\Peraturan::status()->prepend('Pilih',' ')" name="status"
                                       title="Status"/>
+                    <x-default-select :option="collect([0 => 'Tidak', 1 => 'YA'])->prepend('Pilih',' ')" name="is_publish"
+                                      title="Publish"/>
+                    <x-default-select :option="collect([0 => 'Tidak', 1 => 'YA'])->prepend('Pilih',' ')" name="draft"
+                                      title="Draft"/>
                     <x-default-input title="Nomor" nama="nomor_peraturan" type="text"/>
                 </div>
                 <div class="text-right">
@@ -41,6 +45,8 @@
                         <th class="p-3 text-left  h-15" style="max-width: 10%">Nomor Peraturan</th>
                         <th class="p-3 text-left  h-15" style="max-width: 30%;">Tentang</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Status</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Status Publish</th>
+                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Status Draft</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Jenis</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Kategori</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Dilihat Peraturan</th>
@@ -55,6 +61,24 @@
                         <td class="border-grey-light h-15 hover:bg-gray-100 p-3">{{$item->nomor_peraturan}}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->judul }}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->status }}</td>
+                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">
+                            @if($item->is_publish == 1)
+                                <span class="text-green-600 font-semibold">Publish</span>
+                            @else
+                                <span class="text-red-600 font-semibold">Draft</span>
+                            @endif
+                        </td>
+                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">
+                            @if(isset($item->jenis_draft))
+                                @if($item->jenis_draft == 1)
+                                    <span class="text-blue-600 font-semibold">Selesai</span>
+                                @else
+                                    <span class="text-orange-600 font-semibold">Proses</span>
+                                @endif
+                            @else
+                                <span class="text-gray-500">-</span>
+                            @endif
+                        </td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->jenis->keterangan ?? ''}}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{@$item->subjek->keterangan ?? '' }}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->count ?? '0' }}x</td>

@@ -26,7 +26,7 @@ trait AttributePeraturan
         $tipe_peraturan_id,
         $jenis_peraturan_id,
         $document_peraturan_id,
-        $is_publish, $parent_id;
+        $is_publish, $parent_id, $draft, $jenis_draft;
 
     public function mountToAttribute(Peraturan $peraturan)
     {
@@ -44,6 +44,8 @@ trait AttributePeraturan
         $this->bahasa = $peraturan->bahasa;
         $this->lokasi = $peraturan->lokasi;
         $this->is_publish = $peraturan->is_publish;
+        $this->draft = $peraturan->draft ?? 0; // Default to 0 if not set
+        $this->jenis_draft = $peraturan->jenis_draft ?? 0; // Default to 0 if not set
         $this->document_peraturan_id = $peraturan->document_peraturan_id;
         if ($this->status == Peraturan::BERLAKU) {
             $this->parent_id = $peraturan->parent_id;

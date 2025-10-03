@@ -31,6 +31,8 @@ class Peraturan extends Model
         'jenis_peraturan_id',
         'document_peraturan_id',
         'is_publish',
+        'draft',
+        'jenis_draft',
         'count',
         'count_download',
         'parent_id'

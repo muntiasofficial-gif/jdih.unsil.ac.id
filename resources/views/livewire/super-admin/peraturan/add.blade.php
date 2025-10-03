@@ -44,6 +44,8 @@
                 <x-default-input nama="tanggal_diundangkan" title="Tanggal diundangkan" type="date"/>
                 <x-default-input nama="bahasa" title="Bahasa" type="text"/>
                 <x-default-input class="col-span-2" nama="lokasi" title="Lokasi" type="text"/>
+                
+                <!-- Publish Field -->
                 <div class="my-2">
                     <x-jet-label>
                         Publish
@@ -57,6 +59,25 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Draft Field -->
+                <div class="my-2">
+                    <x-jet-label>
+                        Draft
+                    </x-jet-label>
+                    <div class="my-2 gap-4 flex">
+                        <div>
+                            <input type="radio" name="draft" wire:model="draft" value="1"/> Ya
+                        </div>
+                        <div>
+                            <input type="radio" name="draft" wire:model="draft" value="0"/> Tidak
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jenis Draft Field -->
+                <x-default-select :option="[0 => 'Proses', 1 => 'Selesai']" name="jenis_draft"
+                                  title="Status Draft"/>
                 <x-jet-label></x-jet-label>
                 <x-default-upload-file accept=".pdf" class="col-span-2" nama="document" :document="$document"
                                        :title="'Document, <div class=\'text-red-500\'>Max Size File: '.ini_get('upload_max_filesize').'</div>'"

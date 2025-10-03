@@ -30,6 +30,7 @@ class Navigation
         'guest' => [
             'guest.home' => 'Beranda',
             'guest.peraturan' => 'Peraturan',
+            'guest.rancangan' => 'Rancangan',
             'guest.inventaris' => 'Inventarisasi',
         ],
     ];
@@ -43,6 +44,10 @@ class Navigation
 
     static public function get()
     {
+        if (!auth()->check()) {
+            return [];
+        }
+        
         $data = auth()->user()->getRoleNames()->toArray();
         $result = [];
         foreach (self::$menus as $key => $item) {
@@ -63,11 +68,14 @@ class Navigation
 
     static public function getGuest()
     {
+        $guestMenu = self::$menus['guest'];
+        
         if (\auth()->check()) {
-            self::$menus['guest']['dashboard'] = 'DASHBOARD';
+            $guestMenu['dashboard'] = 'DASHBOARD';
         } else {
-            self::$menus['guest']['login'] = 'MASUK';
+            $guestMenu['login'] = 'MASUK';
         }
-        return self::$menus['guest'];
+        
+        return $guestMenu;
     }
 }

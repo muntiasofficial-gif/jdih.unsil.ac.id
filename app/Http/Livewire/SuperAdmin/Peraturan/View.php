@@ -12,7 +12,7 @@ use Maatwebsite\Excel\Excel;
 
 class View extends Component
 {
-    public $judul, $tahun, $subjek_id, $jenis_peraturan_id, $status, $nomor_peraturan;
+    public $judul, $tahun, $subjek_id, $jenis_peraturan_id, $status, $nomor_peraturan, $is_publish, $draft;
     use WithPagination, AttributePeraturan;
 
     public function download()
@@ -36,6 +36,12 @@ class View extends Component
             })
             ->when($this->nomor_peraturan, function ($q) {
                 $q->where('nomor_peraturan', 'like', '%' . $this->nomor_peraturan . '%');
+            })
+            ->when($this->is_publish !== null, function ($q) {
+                $q->where('is_publish', $this->is_publish);
+            })
+            ->when($this->draft !== null, function ($q) {
+                $q->where('draft', $this->draft);
             })
             ->latest()
             ->paginate(10);

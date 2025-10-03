@@ -18,9 +18,6 @@ Route::prefix('/')->group( function () {
     Route::get('inventarisasi',\App\Http\Livewire\Guest\Inventarisasi\View::class)->name('guest.inventaris');
     Route::get('peraturan',\App\Http\Livewire\Guest\Peraturan\View::class)->name('guest.peraturan');
     Route::get('rancangan-peraturan',\App\Http\Livewire\Guest\Rancangan\View::class)->name('guest.rancangan');
-    Route::get('login', function () {
-        return redirect()->route('login');
-    })->name('login');
     Route::middleware(['is_publish'])->group(function (){
         Route::get('peraturan/view/{peraturan_id}',\App\Http\Livewire\Guest\Peraturan\Detail::class)->name('guest.peraturan.view');
     });
@@ -36,6 +33,7 @@ Route::prefix('super-admin')->middleware(['auth:sanctum', 'verified','role:super
     });
     Route::get('data-master',\App\Http\Livewire\SuperAdmin\DataMaster\View::class)->name('data-master');
     Route::get('peraturan',\App\Http\Livewire\SuperAdmin\Peraturan\View::class)->name('peraturan');
+    Route::get('draft-peraturan',\App\Http\Livewire\SuperAdmin\Draft\View::class)->name('draft-peraturan');
     Route::get('peraturan/add',\App\Http\Livewire\SuperAdmin\Peraturan\Add::class)->name('peraturan.add');
     Route::get('peraturan/edit/{peraturan_id}',\App\Http\Livewire\SuperAdmin\Peraturan\Add::class)->name('peraturan.edit');
 });

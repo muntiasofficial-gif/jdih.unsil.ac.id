@@ -44,7 +44,6 @@
                         <th class="p-3 text-left  h-15" style="width: 5% !important;">#</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%">Nomor Peraturan</th>
                         <th class="p-3 text-left  h-15" style="max-width: 30%;">Tentang</th>
-                        <th class="p-3 text-left  h-15" style="max-width: 10%;">Status</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Status Publish</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Status Draft</th>
                         <th class="p-3 text-left  h-15" style="max-width: 10%;">Jenis</th>
@@ -60,7 +59,6 @@
                         <td class="border-grey-light h-15 hover:bg-gray-100 p-3">{{$table->firstItem() + $key}}</td>
                         <td class="border-grey-light h-15 hover:bg-gray-100 p-3">{{$item->nomor_peraturan}}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->judul }}</td>
-                        <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">{{$item->status }}</td>
                         <td class="border-grey-light border-t-2 h-15 hover:bg-gray-100 p-3 truncate">
                             @if($item->is_publish == 1)
                                 <span class="text-green-600 font-semibold">Publish</span>

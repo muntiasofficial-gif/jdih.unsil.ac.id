@@ -21,7 +21,8 @@ class Navigation
         'super-admin' => [
             'data-master' => 'Data Master',
             'user.list' => 'Pengguna',
-            'peraturan' => 'Peraturan'
+            'peraturan' => 'Peraturan',
+            'draft-peraturan' => 'Draft'
         ],
         'general' => [
             'data-master' => 'Data Master',

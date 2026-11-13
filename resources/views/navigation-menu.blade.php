@@ -8,6 +8,7 @@
                         <x-jet-application-mark class="block h-9 w-auto"/>
                     </a>
                 </div>
+                
                 <div class=" font-bold items-center px-1 mt-6 ml-3 text-4xl font-medium leading-5 text-black focus:outline-none focus:border-indigo-700 transition">
 {{--                    {{env('APP_NAME')}}--}}
 {{--                    <br>--}}
@@ -19,7 +20,7 @@
         </div>
     </div>
 </nav>
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 w-full z-20" id="header">
+<nav x-data="{ open: false, showLogout: false }" class="bg-white border-b border-gray-100 w-full z-20" id="header">
     <!-- Primary Navigation Menu -->
     <div class=" mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -132,18 +133,22 @@
                             <div class="border-t border-gray-100"></div>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
+                            
+                                <form method="POST" action="{{ route('logout') }}" id="logout-form">
                                 @csrf
 
-                                <x-jet-dropdown-link href="{{ route('logout') }}"
-                                         onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                <x-jet-dropdown-link href="#"
+                                         x-on:click.prevent.stop="$dispatch('open-logout-modal')">
                                     {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
+                            
+                           
+                            
                         </x-slot>
                     </x-jet-dropdown>
                 </div>
+               
             </div>
 
             <!-- Hamburger -->
@@ -242,4 +247,26 @@
             </div>
         </div>
     </div>
+    
+     <div x-data="{ show: false }" x-on:open-logout-modal,.window="show = true" x-on:keydown.escape.window="show = false" x-show="show" x-cloak style="display: none;" class="fixed inset-0 z-50">
+        <div class="fixed inset-0 bg-gray-500" style="opacity: 0.75;" x-on:click="show = false"></div>
+        <div class="fixed z-50 bg-white rounded-lg shadow-xl overflow-hidden"
+            style="
+                top: 50% !important;
+                left: 50% !important;
+                transform: translate(-50%, -50%) !important;
+                width: calc(100% - 2rem) !important;
+                max-width: 32rem !important;">
+                <div class="px-6 py-4">
+                    <div class="text-lg font-medium text-gray-900">Logout</div>
+                <div class="text-sm text-gray-600">Apakah anda ingin keluar?</div>
+            </div>
+            <div class="px-6 py-4 bg-gray-100">
+                <div class="flex items-center justify-end gap-2">
+                    <button type="button" class="px-4 py-2 bg-white border border-gray-300 orunded-md text-sm text-gray-700" x-on:click="show = false">Cancel</button>
+                    <button type="button" class="px-4 py-2 text-white bg-red-600 rounded-md text-sm" x-on:click="document.getElementById('logout-form').submit()">Log Out</button>
+                </div>
+            </div>
+        </div>
+     </div>
 </nav>

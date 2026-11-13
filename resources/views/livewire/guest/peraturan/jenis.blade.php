@@ -21,7 +21,9 @@
                 </a>
             @endforeach
         @else
-            {{__('Tidak data jenis peraturan')}}
+             <div class="text-center py-2">
+                {{__('Tidak ada jenis peraturan')}}
+            </div>
         @endif
     </x-slot>
 </x-default-card>

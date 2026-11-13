@@ -47,6 +47,9 @@ class View extends Component implements DataMasterInterface
     {
         $data = Kategori::findOrFail($id);
         $data->delete();
-        // TODO: Implement remove() method.
+         $this->emit('alert', [
+            'tipe' => 'success',
+            'body' => 'Berhasil Dihapus'
+        ]); // TODO: Implement remove() method.
     }
 }

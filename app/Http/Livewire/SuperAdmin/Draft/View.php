@@ -40,6 +40,16 @@ class View extends Component
             ->with(compact('table'));
     }
 
+    public function remove($id)
+    {
+        $peraturan = Peraturan::findOrFail($id);
+        $peraturan->delete();
+        $this->emit('alert', [
+            'tipe' => 'success',
+            'body' => 'Draft berhasil dihapus.',
+        ]);
+    }
+
     public function reset(...$properties)
     {
         parent::reset($properties);

@@ -5,7 +5,7 @@
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                     <!-- This example requires Tailwind CSS v2.0+ -->
-                    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+                    <div class="bg-white shadow overflow-hidden sm:rounded-lg h-[300px]">
                         @if($title->toHtml())
                             <div class="py-5 px-3 flex">
                                 {{$icon}}

@@ -35,17 +35,17 @@ class Users extends Component
 
     public function render()
     {
-        $users = User::where('name', 'like', '%' . $this->name . '%')
-            ->paginate(10);
+        $users = User::all();
+           
         return view('livewire.super-admin.users', [
             'table' => $users
         ]);
     }
 
-    public function mount(UserRepository $user)
-    {
-        $this->user = $user;
-    }
+    // public function mount(UserRepository $user)
+    // {
+    //     $this->user = $user;
+    // }
 
     public function resetPassword(UserRepository $user, $user_id)
     {

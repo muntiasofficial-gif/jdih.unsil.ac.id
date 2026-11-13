@@ -10,6 +10,21 @@
             <div class="p-3">
                 <div id="pie-status" class="w-full overflow-scroll">
                 </div>
+                {{-- <div class="flex gap-2 mt-2">
+                    <button
+                        type="button"
+                        onclick="downloadLokasiJPEG()"
+                        class="px-3 py-2 bg-gray-200 rounded">
+                        Unduh JPEG
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="downloadLokasiPDF()"
+                        class="px-3 py-2 bg-gray-200 rounded">
+                        Unduh PDF
+                    </button>
+                </div> --}}
             </div>
         </x-slot>
     </x-default-card>
@@ -24,6 +39,7 @@
                 plotBorderWidth: null,
                 plotShadow: false,
                 type: 'pie'
+                
             },
             title: {
                 text: '  '
@@ -35,11 +51,15 @@
                 pie: {
                     allowPointSelect: true,
                     cursor: 'pointer',
+                    size: '50%',
                     dataLabels: {
                         enabled: true
                     }
                 }
             },
+
+             colors: ['#2F5597', '#5B9BD5', '#70Ad47'],
+
             series: [{
                 name: 'PRODUK HUKUM',
                 colorByPoint: true,

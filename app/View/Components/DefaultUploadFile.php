@@ -15,7 +15,7 @@ class DefaultUploadFile extends Component
      *
      * @return void
      */
-    public function __construct($nama,$title,$accept = false,$document)
+    public function __construct($nama,$title,$document,$accept = false,)
     {
         $this->nama = $nama;
         $this->title = $title;

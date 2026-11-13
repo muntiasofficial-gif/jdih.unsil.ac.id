@@ -40,6 +40,7 @@ class InitSeeder extends Seeder
 //            'email_verified_at' => Carbon::now(),
 //            'password' => Hash::make('password'),
 //        ]);
+
 //        $user->assignRole($general);
     }
 }

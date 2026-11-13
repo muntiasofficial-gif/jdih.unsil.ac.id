@@ -51,8 +51,8 @@ class View extends Component
 
     public function remove(PeraturanRepo $peraturanRepo, $peraturan_id)
     {
-        $result = $peraturanRepo->remove($peraturan_id);
-        if ($result) {
+        $peraturanRepo->remove($peraturan_id);
+        {
             $this->emit('alert', [
                 'tipe' => 'success',
                 'body' => 'Peraturan berhasil dihapus.',

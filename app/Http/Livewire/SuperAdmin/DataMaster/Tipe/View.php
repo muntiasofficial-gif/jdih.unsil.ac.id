@@ -49,6 +49,10 @@ class View extends Component implements DataMasterInterface
     {
         $data = TipePeraturan::findOrFail($id);
         $data->delete();
+         $this->emit('alert', [
+            'tipe' => 'success',
+            'body' => 'Berhasil Dihapus'
+        ]);
         // TODO: Implement remove() method.
     }
 }

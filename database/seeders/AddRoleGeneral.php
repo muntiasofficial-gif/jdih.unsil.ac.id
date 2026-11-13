@@ -26,7 +26,7 @@ class AddRoleGeneral extends Seeder
         $user = \App\Models\User::updateOrCreate([
             'email' => 'general@gmail.com'], [
             'name' => 'General User',
-            'email' => 'gseneral@gmail.com',
+            'email' => 'general@gmail.com',
             'email_verified_at' => Carbon::now(),
             'password' => Hash::make('password'),
         ]);

@@ -19,7 +19,7 @@ class ChangeRole extends Component
         $user = User::find($this->user_id);
         if ($user) {
 
-            $user->syncRoles(explode(',',$this->role));
+            $user->syncRoles(explode(',', $this->role));
             $this->emit('alert', ['tipe' => 'success', 'body' => 'Hak akses berhasil diubah.']);
         } else {
             $this->emit('alert', ['tipe' => 'warning', 'body' => 'User tidak ditemukan.']);
@@ -35,6 +35,11 @@ class ChangeRole extends Component
 
     public function mount()
     {
-        $this->role = User::find($this->user_id)->getRoleNames()->implode('', '.');
+        $user = User::find($this->user_id);
+        if ($user) {
+            $this->role = $user->getRoleNames()->implode(',', '');
+        } else{
+            $this->role = '';
+        }
     }
 }

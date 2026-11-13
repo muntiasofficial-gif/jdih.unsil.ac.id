@@ -16,7 +16,7 @@ class DefaultSelect extends Component
      *
      * @return void
      */
-    public function __construct($name, $option, $value = "",$title,$multiple=false,$readonly = false)
+    public function __construct($name, $option, $title, $value = "",$multiple=false,$readonly = false)
     {
         //
         $this->title = $title;

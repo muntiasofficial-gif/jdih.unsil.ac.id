@@ -1,0 +1,226 @@
+<mxfile host="65bd71144e">
+    <diagram id="fWOwsjsZtzWfZl4XLNxd" name="Page-1">
+        <mxGraphModel dx="735" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-1" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Super Admin" vertex="1">
+                    <mxGeometry height="660" width="320" x="40" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-7" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-4" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-6" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-4" parent="mAuSCHFaxzONfNMatH4I-1" style="ellipse;fillColor=strokeColor;html=1;" value="" vertex="1">
+                    <mxGeometry height="30" width="30" x="25" y="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-6" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="Buka menu data master" vertex="1">
+                    <mxGeometry height="40" width="110" x="90" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-14" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-11" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-13" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-11" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="Pilih data yang akan dikelola (Jenis, Tipe, Subjek peraturan)" vertex="1">
+                    <mxGeometry height="50" width="137.5" x="89.25" y="126" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-16" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-13" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-15" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-13" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="Pilih aksi" vertex="1">
+                    <mxGeometry height="22" width="75" x="121" y="204" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-18" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-15" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mAuSCHFaxzONfNMatH4I-17">
+                    <mxGeometry relative="1" x="-0.1167" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="266" y="266"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-19" connectable="0" parent="mAuSCHFaxzONfNMatH4I-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="&amp;nbsp;hapus&amp;nbsp;" vertex="1">
+                    <mxGeometry relative="1" x="-0.45" y="-2" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-22" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-15" style="edgeStyle=none;html=1;entryX=0.411;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="mAuSCHFaxzONfNMatH4I-20" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-23" connectable="0" parent="mAuSCHFaxzONfNMatH4I-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="Ubah" vertex="1">
+                    <mxGeometry relative="1" x="-0.2785" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-24" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-15" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mAuSCHFaxzONfNMatH4I-21">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="72" y="266"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-25" connectable="0" parent="mAuSCHFaxzONfNMatH4I-24" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="&amp;nbsp;Tambah&amp;nbsp;" vertex="1">
+                    <mxGeometry relative="1" x="-0.4486" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-15" parent="mAuSCHFaxzONfNMatH4I-1" style="shape=rhombus;html=1;dashed=0;whiteSpace=wrap;perimeter=rhombusPerimeter;" value="" vertex="1">
+                    <mxGeometry height="30" width="34.5" x="141.5" y="251" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-35" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-17" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-34" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-17" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="pilih data yang akan di hapus" vertex="1">
+                    <mxGeometry height="40" width="90" x="221" y="318" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-31" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-20" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-30" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-20" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="pilih data yang akan di ubah" vertex="1">
+                    <mxGeometry height="40" width="90" x="124" y="318" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-27" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-21" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-26" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-21" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="pilih data yang akan di tambah" vertex="1">
+                    <mxGeometry height="40" width="90" x="27" y="318" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-29" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-26" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-28" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-26" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="Isi data baru" vertex="1">
+                    <mxGeometry height="40" width="90" x="27" y="376" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-28" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="klik simpan" vertex="1">
+                    <mxGeometry height="40" width="90" x="27" y="434" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-33" edge="1" parent="mAuSCHFaxzONfNMatH4I-1" source="mAuSCHFaxzONfNMatH4I-30" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-32" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-30" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="Ubah data" vertex="1">
+                    <mxGeometry height="40" width="90" x="124" y="376" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-32" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="Klik simpan" vertex="1">
+                    <mxGeometry height="40" width="90" x="124" y="434" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-34" parent="mAuSCHFaxzONfNMatH4I-1" style="html=1;dashed=0;whiteSpace=wrap;" value="konfirmasi penghapusan" vertex="1">
+                    <mxGeometry height="40" width="90" x="221" y="376" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-3" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Super Admin" vertex="1">
+                    <mxGeometry height="660" width="331" x="360" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-8" parent="mAuSCHFaxzONfNMatH4I-3" style="html=1;dashed=0;whiteSpace=wrap;" value="Menampilkan daftar data master" vertex="1">
+                    <mxGeometry height="40" width="125" x="85" y="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-41" edge="1" parent="mAuSCHFaxzONfNMatH4I-3" source="mAuSCHFaxzONfNMatH4I-38" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-40" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="265" y="430"/>
+                            <mxPoint x="141" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-38" parent="mAuSCHFaxzONfNMatH4I-3" style="html=1;dashed=0;whiteSpace=wrap;" value="Memvalidasi data" vertex="1">
+                    <mxGeometry height="40" width="110" x="210" y="376" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-46" edge="1" parent="mAuSCHFaxzONfNMatH4I-3" source="mAuSCHFaxzONfNMatH4I-40" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mAuSCHFaxzONfNMatH4I-42" value="">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="215" y="469"/>
+                        </Array>
+                        <mxPoint x="231" y="469" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-49" connectable="0" parent="mAuSCHFaxzONfNMatH4I-46" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="&amp;nbsp;ya&amp;nbsp;" vertex="1">
+                    <mxGeometry relative="1" x="-0.4725" y="-1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-48" edge="1" parent="mAuSCHFaxzONfNMatH4I-3" source="mAuSCHFaxzONfNMatH4I-40" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mAuSCHFaxzONfNMatH4I-47">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="70" y="469"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-50" connectable="0" parent="mAuSCHFaxzONfNMatH4I-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="&amp;nbsp;tidak&amp;nbsp;" vertex="1">
+                    <mxGeometry relative="1" x="-0.6137" y="4" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-40" parent="mAuSCHFaxzONfNMatH4I-3" style="shape=rhombus;html=1;dashed=0;whiteSpace=wrap;perimeter=rhombusPerimeter;" value="valid?" vertex="1">
+                    <mxGeometry height="50" width="60" x="111" y="444" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-52" edge="1" parent="mAuSCHFaxzONfNMatH4I-3" source="mAuSCHFaxzONfNMatH4I-42" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-51" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-42" parent="mAuSCHFaxzONfNMatH4I-3" style="html=1;dashed=0;whiteSpace=wrap;" value="Menyimpan data" vertex="1">
+                    <mxGeometry height="40" width="110" x="160" y="516" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-47" parent="mAuSCHFaxzONfNMatH4I-3" style="html=1;dashed=0;whiteSpace=wrap;" value="Menampilkan notif&lt;div&gt;invalid&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="40" width="110" x="16" y="516" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-55" edge="1" parent="mAuSCHFaxzONfNMatH4I-3" source="mAuSCHFaxzONfNMatH4I-51" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-5" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-51" parent="mAuSCHFaxzONfNMatH4I-3" style="html=1;dashed=0;whiteSpace=wrap;" value="Menampilkan notif sukses" vertex="1">
+                    <mxGeometry height="40" width="110" x="160" y="582" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-5" parent="mAuSCHFaxzONfNMatH4I-3" style="ellipse;html=1;shape=endState;fillColor=strokeColor;" value="" vertex="1">
+                    <mxGeometry height="30" width="30" x="80" y="587" as="geometry"/>
+                </mxCell>
+                <mxCell id="zXpvSQIefsZ3TlnuoOji-6" edge="1" parent="mAuSCHFaxzONfNMatH4I-3" source="zXpvSQIefsZ3TlnuoOji-1" style="edgeStyle=none;html=1;" target="zXpvSQIefsZ3TlnuoOji-5" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zXpvSQIefsZ3TlnuoOji-7" connectable="0" parent="zXpvSQIefsZ3TlnuoOji-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="&amp;nbsp;ya&amp;nbsp;" vertex="1">
+                    <mxGeometry relative="1" x="-0.36" y="-1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zXpvSQIefsZ3TlnuoOji-1" parent="mAuSCHFaxzONfNMatH4I-3" style="shape=rhombus;html=1;dashed=0;whiteSpace=wrap;perimeter=rhombusPerimeter;" value="confirm" vertex="1">
+                    <mxGeometry height="50" width="60" x="100" y="305" as="geometry"/>
+                </mxCell>
+                <mxCell id="zXpvSQIefsZ3TlnuoOji-8" edge="1" parent="mAuSCHFaxzONfNMatH4I-3" source="zXpvSQIefsZ3TlnuoOji-5" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-38" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="zXpvSQIefsZ3TlnuoOji-5" parent="mAuSCHFaxzONfNMatH4I-3" style="html=1;dashed=0;whiteSpace=wrap;" value="Hapus data" vertex="1">
+                    <mxGeometry height="40" width="110" x="210" y="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-9" edge="1" parent="1" source="mAuSCHFaxzONfNMatH4I-6" style="edgeStyle=none;html=1;" target="mAuSCHFaxzONfNMatH4I-8" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-12" edge="1" parent="1" source="mAuSCHFaxzONfNMatH4I-8" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="mAuSCHFaxzONfNMatH4I-11">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="507.5" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="mAuSCHFaxzONfNMatH4I-53" edge="1" parent="1" source="mAuSCHFaxzONfNMatH4I-47" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="mAuSCHFaxzONfNMatH4I-6">
+                    <mxGeometry relative="1" x="-0.0294" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="50" y="576"/>
+                            <mxPoint x="50" y="150"/>
+                            <mxPoint x="185" y="150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zXpvSQIefsZ3TlnuoOji-2" edge="1" parent="1" source="mAuSCHFaxzONfNMatH4I-34" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="zXpvSQIefsZ3TlnuoOji-1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="490" y="436"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zXpvSQIefsZ3TlnuoOji-3" edge="1" parent="1" source="zXpvSQIefsZ3TlnuoOji-1" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="mAuSCHFaxzONfNMatH4I-13">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="490" y="255"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="zXpvSQIefsZ3TlnuoOji-4" connectable="0" parent="zXpvSQIefsZ3TlnuoOji-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;" value="Tidak" vertex="1">
+                    <mxGeometry relative="1" x="-0.8023" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

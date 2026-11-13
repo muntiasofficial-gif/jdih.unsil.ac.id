@@ -26,7 +26,7 @@
             @endforeach
         @else
             <div class="text-center py-2">
-                {{__('Tidak data peraturan terbaru')}}
+                {{__('Tidak ada data peraturan terbaru')}}
             </div>
         @endif
     </x-slot>

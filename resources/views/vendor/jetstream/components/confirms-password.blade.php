@@ -34,13 +34,15 @@
     </x-slot>
 
     <x-slot name="footer">
-        <x-jet-secondary-button wire:click="stopConfirmingPassword" wire:loading.attr="disabled">
+    <div class="flex items-center justify-end gap-2 w-full flex-nowarp">
+        <x-jet-secondary-button style="width: auto !important; min-width:0 !important; flex:0 0 auto !important;" wire:click="stopConfirmingPassword" wire:loading.attr="disabled">
             {{ __('Cancel') }}
         </x-jet-secondary-button>
 
         <x-jet-button class="ml-2" dusk="confirm-password-button" wire:click="confirmPassword" wire:loading.attr="disabled">
             {{ $button }}
         </x-jet-button>
+    </div>
     </x-slot>
 </x-jet-dialog-modal>
 @endonce

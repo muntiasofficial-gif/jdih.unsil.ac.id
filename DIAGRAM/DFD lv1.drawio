@@ -1,0 +1,282 @@
+<mxfile host="65bd71144e">
+    <diagram id="CFZNO1lOoHnFzs9gAJ7W" name="Page-1">
+        <mxGraphModel dx="1035" dy="480" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="uYGauKEWbift0xPrXD6N-1" parent="1" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;" value="1.0&lt;div&gt;kelola&lt;/div&gt;&lt;div&gt;data&lt;/div&gt;&lt;div&gt;master&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="100" width="100" x="385" y="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-2" parent="1" style="html=1;dashed=0;whiteSpace=wrap;" value="Super Admin" vertex="1">
+                    <mxGeometry height="40" width="90" x="80" y="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-3" edge="1" parent="1" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uYGauKEWbift0xPrXD6N-1" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="170" y="129" as="sourcePoint"/>
+                        <mxPoint x="290" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data jenis peraturan" vertex="1">
+                    <mxGeometry height="30" width="120" x="179" y="129" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data tipe peraturan" vertex="1">
+                    <mxGeometry height="30" width="120" x="179" y="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data subjek peraturan" vertex="1">
+                    <mxGeometry height="30" width="140" x="170" y="161" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-7" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;left=0;" value="D1 Data jenis peraturan" vertex="1">
+                    <mxGeometry height="30" width="130" x="556" y="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-8" edge="1" parent="1" style="endArrow=classic;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+                    <mxGeometry height="50" relative="1" width="50" x="-0.0105" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="598" y="30"/>
+                            <mxPoint x="133.5" y="30"/>
+                        </Array>
+                        <mxPoint x="598" y="55" as="sourcePoint"/>
+                        <mxPoint x="133.5" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-10" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;left=0;" value="D2 Data tipe peraturan" vertex="1">
+                    <mxGeometry height="30" width="130" x="609" y="115" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-11" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-1" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uYGauKEWbift0xPrXD6N-7" value="">
+                    <mxGeometry height="50" relative="1" width="50" x="-0.1595" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="435" y="70"/>
+                        </Array>
+                        <mxPoint x="390" y="270" as="sourcePoint"/>
+                        <mxPoint x="500" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Informasi data master" vertex="1">
+                    <mxGeometry height="30" width="120" x="150" y="5" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data jenis peraturan" vertex="1">
+                    <mxGeometry height="30" width="120" x="429" y="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-14" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-1" style="endArrow=classic;html=1;" target="uYGauKEWbift0xPrXD6N-10" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="390" y="270" as="sourcePoint"/>
+                        <mxPoint x="440" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data tipe peraturan" vertex="1">
+                    <mxGeometry height="30" width="120" x="484" y="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-16" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-10" style="endArrow=classic;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="uYGauKEWbift0xPrXD6N-2" value="">
+                    <mxGeometry height="50" relative="1" width="50" x="0.0894" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="780" y="130"/>
+                            <mxPoint x="780" y="230"/>
+                            <mxPoint x="147.5" y="230"/>
+                        </Array>
+                        <mxPoint x="420" y="190" as="sourcePoint"/>
+                        <mxPoint x="470" y="140" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Informasi data master" vertex="1">
+                    <mxGeometry height="30" width="120" x="619" y="226" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-19" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;left=0;" value="D3 Data subjek peraturan" vertex="1">
+                    <mxGeometry height="30" width="140" x="609" y="175" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-20" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-1" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="uYGauKEWbift0xPrXD6N-19" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="435" y="190"/>
+                        </Array>
+                        <mxPoint x="506" y="211" as="sourcePoint"/>
+                        <mxPoint x="556" y="161" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data subjek peraturan" vertex="1">
+                    <mxGeometry height="30" width="140" x="462" y="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-22" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-19" style="endArrow=classic;html=1;entryX=0.889;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="uYGauKEWbift0xPrXD6N-2" value="">
+                    <mxGeometry height="50" relative="1" width="50" x="0.0188" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="770" y="190"/>
+                            <mxPoint x="770" y="220"/>
+                            <mxPoint x="160" y="220"/>
+                        </Array>
+                        <mxPoint x="420" y="180" as="sourcePoint"/>
+                        <mxPoint x="470" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Informasi data master" vertex="1">
+                    <mxGeometry height="30" width="120" x="341" y="196" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-25" parent="1" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;" value="2.0&lt;div&gt;kelola&lt;/div&gt;&lt;div&gt;akun&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="100" width="100" x="385" y="256" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-26" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-2" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uYGauKEWbift0xPrXD6N-25" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="125" y="306"/>
+                        </Array>
+                        <mxPoint x="291" y="330" as="sourcePoint"/>
+                        <mxPoint x="341" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data akun" vertex="1">
+                    <mxGeometry height="30" width="140" x="150" y="282" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-28" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-25" style="endArrow=classic;html=1;entryX=0.333;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.037;exitY=0.69;exitDx=0;exitDy=0;exitPerimeter=0;" target="uYGauKEWbift0xPrXD6N-2" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="109.97" y="325"/>
+                        </Array>
+                        <mxPoint x="320" y="400" as="sourcePoint"/>
+                        <mxPoint x="370" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Informasi akun / hasil pengelolaan akun" vertex="1">
+                    <mxGeometry height="30" width="226" x="140" y="322" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-31" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;left=0;" value="D4 Data akun" vertex="1">
+                    <mxGeometry height="30" width="140" x="570" y="291" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-32" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-25" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uYGauKEWbift0xPrXD6N-31" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="460" y="240" as="sourcePoint"/>
+                        <mxPoint x="510" y="190" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data akun" vertex="1">
+                    <mxGeometry height="30" width="140" x="456" y="281" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-34" parent="1" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;" value="3.0&lt;div&gt;kelola&lt;/div&gt;&lt;div&gt;peraturan&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="100" width="100" x="385" y="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-35" edge="1" parent="1" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.053;entryY=0.258;entryDx=0;entryDy=0;entryPerimeter=0;" target="uYGauKEWbift0xPrXD6N-34" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="97" y="395.8"/>
+                        </Array>
+                        <mxPoint x="97" y="150" as="sourcePoint"/>
+                        <mxPoint x="357" y="306" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-37" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-34" style="endArrow=classic;html=1;entryX=0.078;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="uYGauKEWbift0xPrXD6N-2" value="">
+                    <mxGeometry height="50" relative="1" width="50" x="0.2235" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="435" y="480"/>
+                            <mxPoint x="87.02" y="480"/>
+                        </Array>
+                        <mxPoint x="385" y="419" as="sourcePoint"/>
+                        <mxPoint x="88.63999999999987" y="153.15999999999997" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-39" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data peraturan&lt;div&gt;Data jenis perturan&amp;nbsp;&lt;/div&gt;&lt;div&gt;Data tipe peraturan&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="30" width="140" x="99" y="412" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(134, 139, 196, 0.08) rgb(26, 27, 38);&quot;&gt;Data subjek peraturan&lt;/div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(134, 139, 196, 0.08) rgb(26, 27, 38);&quot;&gt;Data dokumen/PDF&lt;/div&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgba(134, 139, 196, 0.08) rgb(26, 27, 38);&quot;&gt;Data status publikasi&lt;/div&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="30" width="140" x="237" y="405" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-41" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Informasi peraturan / hasil pengelolaan&amp;nbsp;" vertex="1">
+                    <mxGeometry height="30" width="226" x="150" y="477" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-42" edge="1" parent="1" style="endArrow=classic;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="679" y="160"/>
+                            <mxPoint x="790" y="160"/>
+                            <mxPoint x="790" y="385.64"/>
+                        </Array>
+                        <mxPoint x="679" y="176" as="sourcePoint"/>
+                        <mxPoint x="470.3553390593272" y="385.6446609406727" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data subjek peraturan" vertex="1">
+                    <mxGeometry height="30" width="140" x="609" y="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-44" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-10" style="endArrow=classic;html=1;entryX=0.987;entryY=0.308;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="uYGauKEWbift0xPrXD6N-34" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="674" y="100"/>
+                            <mxPoint x="810" y="100"/>
+                            <mxPoint x="810" y="400"/>
+                        </Array>
+                        <mxPoint x="460" y="330" as="sourcePoint"/>
+                        <mxPoint x="510" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-46" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data tipe peraturan" vertex="1">
+                    <mxGeometry height="30" width="120" x="510" y="395" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-47" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-7" style="endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="uYGauKEWbift0xPrXD6N-34" value="">
+                    <mxGeometry height="50" relative="1" width="50" x="0.6532" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="830" y="70"/>
+                            <mxPoint x="830" y="420"/>
+                        </Array>
+                        <mxPoint x="460" y="270" as="sourcePoint"/>
+                        <mxPoint x="510" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-49" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data jenis peraturan" vertex="1">
+                    <mxGeometry height="30" width="120" x="700" y="416" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-50" parent="1" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;left=0;" value="D5 Data peraturan" vertex="1">
+                    <mxGeometry height="30" width="140" x="680" y="472" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-51" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-34" style="endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="uYGauKEWbift0xPrXD6N-50" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="470" y="487"/>
+                        </Array>
+                        <mxPoint x="460" y="360" as="sourcePoint"/>
+                        <mxPoint x="510" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data subjek peraturan" vertex="1">
+                    <mxGeometry height="30" width="140" x="490" y="484" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data tipe peraturan" vertex="1">
+                    <mxGeometry height="30" width="120" x="500" y="499" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-54" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data jenis peraturan" vertex="1">
+                    <mxGeometry height="30" width="120" x="501" y="514" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-56" parent="1" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;" value="4.0&lt;div&gt;publikasi &amp;amp;&lt;/div&gt;&lt;div&gt;penyajian&lt;/div&gt;&lt;div&gt;peraturan&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="100" width="100" x="390" y="544" as="geometry"/>
+                </mxCell>
+                <mxCell id="uYGauKEWbift0xPrXD6N-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Peraturan yang dipublikasi" vertex="1">
+                    <mxGeometry height="30" width="174" x="560" y="559" as="geometry"/>
+                </mxCell>
+                <mxCell id="kEV_6IwN05tRFUQG70V0-1" edge="1" parent="1" source="uYGauKEWbift0xPrXD6N-50" style="endArrow=classic;html=1;entryX=1.01;entryY=0.42;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="uYGauKEWbift0xPrXD6N-56" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="750" y="586"/>
+                        </Array>
+                        <mxPoint x="440" y="560" as="sourcePoint"/>
+                        <mxPoint x="490" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kEV_6IwN05tRFUQG70V0-3" parent="1" style="html=1;dashed=0;whiteSpace=wrap;" value="Pengunjung" vertex="1">
+                    <mxGeometry height="50" width="100" x="56" y="570" as="geometry"/>
+                </mxCell>
+                <mxCell id="kEV_6IwN05tRFUQG70V0-4" edge="1" parent="1" source="kEV_6IwN05tRFUQG70V0-3" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" target="uYGauKEWbift0xPrXD6N-56" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="440" y="560" as="sourcePoint"/>
+                        <mxPoint x="490" y="510" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kEV_6IwN05tRFUQG70V0-5" edge="1" parent="1" source="kEV_6IwN05tRFUQG70V0-3" style="endArrow=none;html=1;exitX=0.99;exitY=0.64;exitDx=0;exitDy=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endFill=0;exitPerimeter=0;" value="">
+                    <mxGeometry height="50" relative="1" width="50" as="geometry">
+                        <mxPoint x="199" y="602" as="sourcePoint"/>
+                        <mxPoint x="389" y="604" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="kEV_6IwN05tRFUQG70V0-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="permintaan informasi / pencarian peraturan" vertex="1">
+                    <mxGeometry height="30" width="251" x="150" y="557" as="geometry"/>
+                </mxCell>
+                <mxCell id="kEV_6IwN05tRFUQG70V0-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Peraturan yang dipublikasi" vertex="1">
+                    <mxGeometry height="30" width="174" x="187" y="600" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

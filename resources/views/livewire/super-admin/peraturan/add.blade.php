@@ -9,14 +9,14 @@
         <x-slot name="title"></x-slot>
         <x-slot name="description"></x-slot>
         <x-slot name="content">
-            <div class="grid grid-cols-2 gap-4">
-                <x-default-select class="col-span-2"
+            <div class="grid grid-cols-2 gap-x-4 gap-y-5">
+                <x-default-select 
                                   :option="\App\Models\TipePeraturan::all()->pluck('keterangan','id')->prepend('Pilih',' ')"
                                   name="tipe_peraturan_id" title="Tipe Peraturan"/>
-                <x-default-select class="col-span-2"
+                <x-default-select 
                                   :option="\App\Models\Kategori::all()->pluck('keterangan','id')->prepend('Pilih',' ')"
                                   name="subjek_id" title="Subjek"/>
-                <x-default-select class="col-span-2"
+                <x-default-select 
                                   :option="\App\Models\JenisPeraturan::all()->pluck('keterangan','id')->prepend('Pilih',' ')"
                                   name="jenis_peraturan_id" title="Jenis"/>
                 <x-default-select :option="\App\Models\Peraturan::status()->prepend('Pilih',' ')" name="status"
@@ -43,9 +43,21 @@
                 <x-default-input nama="tanggal_ditetapkan" title="Tanggal ditetapkan" type="date"/>
                 <x-default-input nama="tanggal_diundangkan" title="Tanggal diundangkan" type="date"/>
                 <x-default-input nama="bahasa" title="Bahasa" type="text"/>
-                <x-default-input class="col-span-2" nama="lokasi" title="Lokasi" type="text"/>
+                {{-- <x-default-input class="col-span-2" nama="lokasi" title="Lokasi" type="text"/> --}}
+                <div>
+                    <label for="lokasi" class="block text-sm font-medium text-gray-700">Lokasi</label>
+                    <input type="text" list="lokasi-options" id="lokasi" wire:model="lokasi" 
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm" 
+                        placeholder="Pilih atau ketik lokasi">
+                    <datalist id="lokasi-options">
+                        <option value="Kampus 1">
+                        <option value="Kampus 2">
+                    </datalist>
+                    @error('lokasi')
+                        <span class="text-sm text-red-600">{{ $message }}</span>
+                    @enderror
+                </div>
                 
-                <!-- Publish Field -->
                 <div class="my-2">
                     <x-jet-label>
                         Publish
@@ -60,7 +72,6 @@
                     </div>
                 </div>
                 
-                <!-- Draft Field -->
                 <div class="my-2">
                     <x-jet-label>
                         Draft
@@ -75,7 +86,6 @@
                     </div>
                 </div>
                 
-                <!-- Jenis Draft Field -->
                 <x-default-select :option="[0 => 'Proses', 1 => 'Selesai']" name="jenis_draft"
                                   title="Status Draft"/>
                 <x-jet-label></x-jet-label>

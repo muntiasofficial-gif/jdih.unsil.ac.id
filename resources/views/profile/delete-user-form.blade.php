@@ -39,13 +39,10 @@
             </x-slot>
 
             <x-slot name="footer">
-                <x-jet-secondary-button wire:click="$toggle('confirmingUserDeletion')" wire:loading.attr="disabled">
-                    {{ __('Cancel') }}
-                </x-jet-secondary-button>
-
-                <x-jet-danger-button class="ml-2" wire:click="deleteUser" wire:loading.attr="disabled">
-                    {{ __('Delete Account') }}
-                </x-jet-danger-button>
+                <div class="flex items-center justify-end gap-2 w-full flex-nowarp">
+                    <x-jet-secondary-button style="width: auto !important; min-width:0 !important; flex:0 0 auto !important;" wire:click="$toggle('confirming UserDeletion')" wire:loading.attr="disabled">{{ __('Cancel') }}</x-jet-secondary-button>
+                    <x-jet-danger-button wire:click="deleteUser" wire:loading.attr="disabled">{{ __('Delete Account') }}</x-jet-danger-button>
+                </div>
             </x-slot>
         </x-jet-dialog-modal>
     </x-slot>
